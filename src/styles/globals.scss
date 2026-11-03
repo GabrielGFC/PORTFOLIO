@@ -26,6 +26,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  text-wrap: pretty;
 
   @media (min-width: 768px) {
     font-size: var(--fs-body);

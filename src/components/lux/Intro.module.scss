@@ -60,10 +60,10 @@
 
 .title {
   max-width: 11ch;
-  font-family: var(--ff-serif);
+  font-family: var(--ff-display);
   font-size: clamp(46px, 7.4vw, 112px);
-  font-weight: 300;
-  line-height: 0.98;
+  font-weight: 800;
+  line-height: 0.96;
   letter-spacing: -0.02em;
   color: var(--sunfall-ivory);
 
@@ -73,9 +73,9 @@
   }
 
   em {
-    font-style: italic;
-    font-weight: 300;
-    color: var(--sunfall-cream);
+    font-style: normal;
+    font-weight: 800;
+    color: var(--sunfall-fire);
   }
 }
 

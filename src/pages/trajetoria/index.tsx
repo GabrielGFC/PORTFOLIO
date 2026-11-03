@@ -51,14 +51,6 @@ const Trajetoria: React.FC = () => {
       <main id="conteudo" tabIndex={-1}>
         <section className={styles.intro} aria-labelledby="journey-title">
           <div className="container">
-            <motion.p
-              className="eyebrow"
-              initial={reduce ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: duration.slow, ease }}
-            >
-              {t.eyebrow}
-            </motion.p>
             <MaskedTitle as="h1" id="journey-title" className={styles.title} onMount delay={0.15}>
               {t.title}
             </MaskedTitle>

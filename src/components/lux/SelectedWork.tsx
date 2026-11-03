@@ -78,7 +78,6 @@ const SelectedWork: React.FC = () => {
     <section id="work" className={styles.section} aria-labelledby="work-title">
       <div className="container">
         <header className={styles.head}>
-          <p className="eyebrow">{t.eyebrow}</p>
           <MaskedTitle id="work-title" className={styles.title}>
             {t.title}
           </MaskedTitle>

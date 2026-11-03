@@ -5,6 +5,8 @@
    5% luz quente. Laranja é assinatura, não enfeite.
    Contraste (sobre --sunfall-void): marfim 17:1,
    texto secundário 7.4:1, fogo 9.1:1.
+   Tipografia única (Archivo), sem kicker/eyebrow
+   acima de título: ver layout.scss.
    ============================================ */
 
 :root {
@@ -104,10 +106,11 @@
   );
 
   /* ---------- TIPOGRAFIA ---------- */
-  --ff: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --ff-display: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  /* Serifa de exibição da Direção C: títulos de destaque (herói, números, pranchas) */
-  --ff-serif: "Fraunces", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  /* Uma só voz grotesca (Archivo) no lugar da dupla Inter/Fraunces: menos genérica que Inter
+     como texto corrido, sem o clichê de serifa itálica de hero em destaque. */
+  --ff: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --ff-display: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --ff-serif: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --ff-mono:"Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
   --fs-eyebrow: 12px;

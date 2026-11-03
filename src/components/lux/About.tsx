@@ -17,7 +17,6 @@ const About: React.FC = () => {
     <section id="about" className={styles.section} aria-labelledby="about-title">
       <div className={`container ${styles.layout}`}>
         <div className={styles.story}>
-          <p className="eyebrow">{t.eyebrow}</p>
           <MaskedTitle id="about-title" className={styles.title}>
             {t.title}
           </MaskedTitle>

@@ -56,14 +56,6 @@ const ProjectPage: React.FC = () => {
             <Link to="/" state={{ scrollTo: "work" }} className={styles.back}>
               <span aria-hidden="true">←</span> {t.back}
             </Link>
-            <motion.p
-              className="eyebrow"
-              initial={reduce ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: duration.slow, ease }}
-            >
-              {text.badge}
-            </motion.p>
             <MaskedTitle as="h1" id="case-title" className={styles.title} onMount delay={0.1}>
               {text.title}
             </MaskedTitle>

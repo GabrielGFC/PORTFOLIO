@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "geist mono",
+        "createdAt": "2026-11-03T16:21:11.255Z",
+        "reason": "mono accent only (tags/dates/location label), not primary or display font; not the flagged overused-font pattern"
+      }
+    ]
+  }
+}

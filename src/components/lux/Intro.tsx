@@ -24,10 +24,6 @@ const Intro: React.FC = () => {
       </div>
 
       <div className={`container ${styles.inner}`}>
-        <motion.p className="eyebrow" {...fadeIn(0.05)}>
-          {t.eyebrow}
-        </motion.p>
-
         <motion.h1 id="hero-title" className={styles.title} {...fadeIn(0.15)}>
           <span>{t.line1}</span> <em>{t.line2}</em>
         </motion.h1>

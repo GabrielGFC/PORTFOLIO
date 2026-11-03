@@ -28,7 +28,6 @@ const Closing: React.FC = () => {
   return (
     <section id="contact" className={styles.section} aria-labelledby="contact-title">
       <div className={`container ${styles.inner}`}>
-        <p className="eyebrow">{t.eyebrow}</p>
         <MaskedTitle id="contact-title" className={styles.title}>
           {t.title}
         </MaskedTitle>

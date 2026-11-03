@@ -5,25 +5,6 @@
   padding: 0 var(--gutter);
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  font-family: var(--ff-mono);
-  font-size: var(--fs-mono);
-  font-weight: 400;
-  letter-spacing: var(--tracking-eyebrow);
-  text-transform: uppercase;
-  color: var(--sunfall-fire);
-
-  &::before {
-    content: "";
-    width: 28px;
-    height: 1px;
-    background: currentColor;
-  }
-}
-
 .linkArrow {
   display: inline-flex;
   align-items: center;

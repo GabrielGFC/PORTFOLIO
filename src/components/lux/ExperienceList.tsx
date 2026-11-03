@@ -18,7 +18,6 @@ const ExperienceList: React.FC = () => {
     <section id="experience" className={styles.section} aria-labelledby="experience-title">
       <div className={`container ${styles.layout}`}>
         <header className={styles.head}>
-          <p className="eyebrow">{t.eyebrow}</p>
           <MaskedTitle id="experience-title" className={styles.title}>
             {t.title}
           </MaskedTitle>
