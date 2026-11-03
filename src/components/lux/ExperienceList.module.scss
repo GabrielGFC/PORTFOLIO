@@ -1,6 +1,6 @@
 .section {
   padding: var(--section-y) 0;
-  background: linear-gradient(180deg, var(--sunfall-void) 0%, var(--sunfall-night) 100%);
+  background: linear-gradient(180deg, var(--sunfall-paper-bg) 0%, var(--sunfall-night) 100%);
 }
 
 .layout {
@@ -91,7 +91,7 @@
   }
 
   .period {
-    color: var(--sunfall-fire);
+    color: var(--sunfall-slate);
   }
 }
 
@@ -108,7 +108,7 @@
     border: 1px solid var(--color-border-medium);
     font-family: var(--ff-mono);
     font-size: var(--fs-mono);
-    color: var(--sunfall-cream);
+    color: var(--sunfall-slate);
   }
 }
 

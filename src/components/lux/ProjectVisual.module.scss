@@ -71,33 +71,35 @@
 }
 
 .nodeStrong rect {
-  stroke: var(--sunfall-fire);
+  stroke: var(--sunfall-slate);
 }
 
+/* Título e legenda ficam dentro da caixa escura (.node rect): precisam de tinta clara, não da
+   tinta principal (escura) do resto da página. */
 .nodeTitle {
   font-family: var(--ff-display);
   font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.01em;
-  fill: var(--sunfall-ivory);
+  fill: var(--color-text-on-dark);
 }
 
 .nodeSub {
   font-family: var(--ff-mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.02em;
-  fill: var(--color-text-muted);
+  fill: rgba(var(--sunfall-night-rgb), 0.68);
 }
 
 .edge {
   font-family: var(--ff-mono);
   font-size: 10px;
-  fill: var(--sunfall-fire);
+  fill: var(--sunfall-slate);
 }
 
 .arrow {
   fill: none;
-  stroke: var(--sunfall-fire);
+  stroke: var(--sunfall-slate);
   stroke-width: 1.4;
 }
 
@@ -118,6 +120,6 @@
 
 .arrowHead {
   fill: none;
-  stroke: var(--sunfall-fire);
+  stroke: var(--sunfall-slate);
   stroke-width: 1.6;
 }

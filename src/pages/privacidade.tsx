@@ -15,7 +15,6 @@ const Privacidade: React.FC = () => {
         </Link>
 
         <header className={styles.header}>
-          <p className={styles.eyebrow}>Documento legal</p>
           <h1 className={styles.title}>Política de Privacidade</h1>
           <p className={styles.subtitle}>
             Última atualização: 03/06/2026 · Controlador: Gabriel Fernandes de

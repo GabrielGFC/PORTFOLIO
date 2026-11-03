@@ -15,7 +15,6 @@ const Termos: React.FC = () => {
         </Link>
 
         <header className={styles.header}>
-          <p className={styles.eyebrow}>Documento legal</p>
           <h1 className={styles.title}>Termos de Uso</h1>
           <p className={styles.subtitle}>
             Última atualização: 03/06/2026 · Ao acessar este portfólio você

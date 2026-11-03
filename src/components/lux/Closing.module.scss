@@ -1,6 +1,6 @@
 .section {
   padding: var(--section-y) 0;
-  background: linear-gradient(180deg, var(--sunfall-night) 0%, var(--sunfall-void) 100%);
+  background: linear-gradient(180deg, var(--sunfall-night) 0%, var(--sunfall-paper-bg) 100%);
 }
 
 .inner {
@@ -44,16 +44,16 @@
   color: var(--sunfall-ivory);
   text-decoration: none;
   overflow-wrap: anywhere;
-  background: linear-gradient(var(--sunfall-fire), var(--sunfall-fire)) left bottom / 100% 1px no-repeat;
+  background: linear-gradient(var(--sunfall-slate), var(--sunfall-slate)) left bottom / 100% 1px no-repeat;
   transition: color var(--dur-base) var(--ease-lux);
 
   span {
-    color: var(--sunfall-fire);
+    color: var(--sunfall-slate);
     transition: transform var(--dur-base) var(--ease-lux);
   }
 
   &:hover {
-    color: var(--sunfall-fire);
+    color: var(--sunfall-slate);
 
     span {
       transform: translateX(6px);
@@ -109,8 +109,8 @@
   color: var(--sunfall-ivory);
 
   &:hover {
-    border-color: var(--sunfall-fire);
-    color: var(--sunfall-fire);
+    border-color: var(--sunfall-slate);
+    color: var(--sunfall-slate);
   }
 }
 
@@ -143,8 +143,8 @@
     transition: border-color var(--dur-fast) var(--ease-lux), color var(--dur-fast) var(--ease-lux);
 
     &:hover {
-      border-color: var(--sunfall-fire);
-      color: var(--sunfall-fire);
+      border-color: var(--sunfall-slate);
+      color: var(--sunfall-slate);
     }
   }
 }

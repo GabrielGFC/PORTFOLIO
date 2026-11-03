@@ -5,7 +5,7 @@
   right: 0;
   z-index: 60;
   height: 2px;
-  background: var(--sunfall-fire);
+  background: var(--sunfall-slate);
   transform-origin: left;
 }
 
@@ -85,7 +85,7 @@
     top: 8px;
     bottom: 8px;
     width: 2px;
-    background: var(--sunfall-fire);
+    background: var(--sunfall-slate);
     transform: scaleY(0);
     transition: transform var(--dur-base) var(--ease-lux);
   }
@@ -104,7 +104,7 @@
 }
 
 .indexNum {
-  color: var(--sunfall-fire);
+  color: var(--sunfall-slate);
 }
 
 .chapters {
@@ -144,7 +144,7 @@
 }
 
 .period {
-  color: var(--sunfall-fire);
+  color: var(--sunfall-slate);
 }
 
 .chapterTitle {
@@ -163,7 +163,7 @@
   gap: 4px;
   margin-top: 4px;
   padding: 4px 0 4px 18px;
-  border-left: 2px solid var(--sunfall-fire);
+  border-left: 2px solid var(--sunfall-slate);
   font-size: 16px;
   line-height: 1.55;
   color: var(--sunfall-ivory);
@@ -173,7 +173,7 @@
     font-size: var(--fs-mono);
     letter-spacing: var(--tracking-eyebrow);
     text-transform: uppercase;
-    color: var(--sunfall-fire);
+    color: var(--sunfall-slate);
   }
 }
 

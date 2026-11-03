@@ -1,24 +1,7 @@
-/* Galeria em papel: os tokens de cor são redefinidos só aqui, então os cartões e links herdam o tema claro.
-   Contrastes sobre o papel #e7e6d6: tinta 14:1, texto suave #435260 ~6:1, azul #284261 ~8:1. */
+/* Galeria: antes era a única seção clara dentro de um site escuro, com sua própria paleta de
+   papel; agora o site inteiro é claro, então a seção herda os tokens globais em vez de duplicá-los. */
 .section {
-  --sunfall-ivory: var(--paper-ink);
-  --sunfall-ivory-rgb: 16, 27, 36;
-  --sunfall-cream: #284261;
-  --sunfall-fire: #284261;
-  --sunfall-fire-rgb: 40, 66, 97;
-  --sunfall-deep-blue: #f3f2e6;
-  --sunfall-night: #eceadb;
-  --color-text-main: var(--paper-ink);
-  --color-text-muted: #435260;
-  --color-border-subtle: rgba(16, 27, 36, 0.1);
-  --color-border-medium: rgba(16, 27, 36, 0.24);
-  --color-border-strong: rgba(16, 27, 36, 0.5);
-  --color-border-card: rgba(16, 27, 36, 0.14);
-  --line-soft: linear-gradient(90deg, rgba(16, 27, 36, 0.22), rgba(16, 27, 36, 0.08) 70%, transparent);
-
   padding: var(--section-y) 0;
-  background: var(--paper);
-  color: var(--paper-ink);
   counter-reset: prancha;
 }
 
@@ -112,7 +95,7 @@
   transition: border-color var(--dur-base) var(--ease-lux);
 
   &:hover {
-    border-color: rgba(var(--sunfall-fire-rgb), 0.55);
+    border-color: rgba(var(--sunfall-slate-rgb), 0.55);
 
     .media img {
       transform: scale(1.025);
@@ -124,7 +107,7 @@
   }
 
   &:has(.link:focus-visible) {
-    outline: 2px solid var(--sunfall-fire);
+    outline: 2px solid var(--sunfall-slate);
     outline-offset: 4px;
   }
 }
@@ -219,7 +202,7 @@
     border: 1px solid var(--color-border-medium);
     font-family: var(--ff-mono);
     font-size: var(--fs-mono);
-    color: var(--sunfall-cream);
+    color: var(--sunfall-slate);
   }
 }
 
@@ -227,7 +210,7 @@
   margin-top: 8px;
   font-size: 15px;
   font-weight: 600;
-  color: var(--sunfall-fire);
+  color: var(--sunfall-slate);
 
   span {
     display: inline-block;
@@ -269,8 +252,8 @@
   transition: border-color var(--dur-fast) var(--ease-lux), color var(--dur-fast) var(--ease-lux);
 
   &:hover {
-    border-color: var(--sunfall-fire);
-    color: var(--sunfall-fire);
+    border-color: var(--sunfall-slate);
+    color: var(--sunfall-slate);
   }
 }
 
@@ -352,7 +335,7 @@
   transition: border-color var(--dur-fast) var(--ease-lux), color var(--dur-fast) var(--ease-lux);
 
   &:hover {
-    color: var(--sunfall-cream);
-    border-color: var(--sunfall-fire);
+    color: var(--sunfall-slate);
+    border-color: var(--sunfall-slate);
   }
 }

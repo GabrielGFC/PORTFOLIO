@@ -51,7 +51,7 @@
     border: 1px solid var(--color-border-medium);
     font-family: var(--ff-mono);
     font-size: var(--fs-mono);
-    color: var(--sunfall-cream);
+    color: var(--sunfall-slate);
   }
 }
 
@@ -129,7 +129,7 @@
   font-weight: 400;
   letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
-  color: var(--sunfall-fire);
+  color: var(--sunfall-slate);
 }
 
 .blockText {
@@ -155,7 +155,7 @@
       top: 0.85em;
       width: 10px;
       height: 1px;
-      background: var(--sunfall-fire);
+      background: var(--sunfall-slate);
     }
   }
 }
@@ -181,7 +181,7 @@
   transition: border-color var(--dur-base) var(--ease-lux);
 
   &:hover {
-    border-color: rgba(var(--sunfall-fire-rgb), 0.55);
+    border-color: rgba(var(--sunfall-slate-rgb), 0.55);
   }
 }
 

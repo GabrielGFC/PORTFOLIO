@@ -70,7 +70,7 @@ img {
 }
 
 *:focus-visible {
-  outline: 2px solid var(--sunfall-fire);
+  outline: 2px solid var(--sunfall-slate);
   outline-offset: 4px;
   border-radius: 1px;
 }
@@ -111,7 +111,7 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--sunfall-void);
+  background: var(--sunfall-paper-bg);
 }
 
 ::-webkit-scrollbar-thumb {

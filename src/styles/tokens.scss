@@ -1,37 +1,47 @@
 /* ============================================
-   DESIGN TOKENS — SUNFALL QUIET LUXURY
+   DESIGN TOKENS — SUNFALL, PAPEL CLARO
    ============================================
-   75% escuro e espaço vazio, 20% tipografia,
-   5% luz quente. Laranja é assinatura, não enfeite.
-   Contraste (sobre --sunfall-void): marfim 17:1,
-   texto secundário 7.4:1, fogo 9.1:1.
+   Fundo branco frio (não creme/bege — evita o
+   clichê de paleta quente de IA), tinta quase-preta
+   para texto, ciano como acento assinatura.
+   void (tinta) e slate (tinta de acento) ficam
+   escuros em qualquer tema; night/deep-blue viraram
+   superfícies claras; ivory virou a tinta principal.
+   Contraste sobre --sunfall-paper-bg (#f6f7f5):
+   tinta 17.8:1, texto secundário ~7.9:1,
+   acento (slate) ~8.4:1.
    Tipografia única (Archivo), sem kicker/eyebrow
    acima de título: ver layout.scss.
    ============================================ */
 
 :root {
   /* ---------- PALETA SUNFALL ---------- */
-  /* Paleta do kit GFC: os nomes "sunfall-*" foram mantidos para não reescrever todos os componentes.
-     void = ink, night = surface, fire = sky (acento principal), cream = sage, ivory = ivory. */
+  /* void = tinta escura (texto/texto-sobre-acento), night/deep-blue = superfícies claras,
+     ivory = tinta principal (clara no tema escuro original, escura aqui), slate = tinta de
+     acento (texto/borda sobre o fundo claro), fire = acento vívido só em preenchimentos
+     autocontidos (botão, ícone, barra decorativa) — nunca como texto direto no fundo. */
   --sunfall-void: #101b24;
-  --sunfall-night: #142330;
-  --sunfall-deep-blue: #182936;
+  --sunfall-paper-bg: #f6f7f5;
+  --sunfall-night: #ffffff;
+  --sunfall-deep-blue: #eef1ef;
   --sunfall-slate: #284261;
-  --sunfall-muted: #878573;
-  --sunfall-ember: #2485a6;
-  --sunfall-burnt-orange: #2485a6;
+  --sunfall-slate-rgb: 40, 66, 97;
+  --sunfall-muted: #5b6b63;
+  --sunfall-ember: #1a6f8f;
+  --sunfall-burnt-orange: #1a6f8f;
   --sunfall-fire: #54bad2;
   --sunfall-cream: #c3d5c7;
-  --sunfall-ivory: #ebecdc;
+  --sunfall-ivory: #101b24;
 
-  --sunfall-ivory-rgb: 235, 236, 220;
+  --sunfall-ivory-rgb: 16, 27, 36;
   --sunfall-fire-rgb: 84, 186, 210;
-  --sunfall-ember-rgb: 36, 133, 166;
-  --sunfall-burnt-rgb: 36, 133, 166;
+  --sunfall-ember-rgb: 26, 111, 143;
+  --sunfall-burnt-rgb: 26, 111, 143;
   --sunfall-void-rgb: 16, 27, 36;
-  --sunfall-night-rgb: 20, 35, 48;
+  --sunfall-night-rgb: 255, 255, 255;
 
-  /* Direção C: papel da galeria e coral de enumeração (coral só em números de prancha) */
+  /* Direção C: papel da galeria (tom levemente diferente do fundo geral, de propósito)
+     e coral de enumeração (coral só em números de prancha) */
   --paper: #e7e6d6;
   --paper-ink: #101b24;
   --coral: #c65046;
@@ -41,11 +51,11 @@
   --gfc-sand: #b8b095;
   --gfc-forest: #1e7453;
 
-  /* Texto secundário, cor sólida para manter o contraste AA (≈6:1 sobre o fundo) */
-  --sunfall-text-soft: #a9bbae;
+  /* Texto secundário, cor sólida para manter o contraste AA (~7.9:1 sobre o papel) */
+  --sunfall-text-soft: #46566a;
 
   /* ---------- SEMÂNTICAS ---------- */
-  --color-bg: var(--sunfall-void);
+  --color-bg: var(--sunfall-paper-bg);
   --color-surface: var(--sunfall-night);
   --color-surface-light: var(--sunfall-deep-blue);
   --color-overlay: rgba(var(--sunfall-void-rgb), 0.78);
@@ -53,14 +63,18 @@
   --color-text-main: var(--sunfall-ivory);
   --color-text-main-rgb: var(--sunfall-ivory-rgb);
   --color-text-muted: var(--sunfall-text-soft);
-  --color-text-on-dark: var(--sunfall-ivory);
+  --color-text-on-dark: var(--sunfall-night);
   --color-text-on-surface: var(--sunfall-ivory);
   --color-text-on-primary: var(--sunfall-void);
 
-  --color-accent: var(--sunfall-fire);
-  --color-accent-rgb: var(--sunfall-fire-rgb);
-  --color-primary: var(--sunfall-fire);
-  --color-primary-rgb: var(--sunfall-fire-rgb);
+  /* --color-accent/--color-primary alimentam texto, borda e sublinhado direto no fundo da página
+     (banner de cookies, páginas legais): usam slate (acento escuro) para ter contraste. O ciano
+     vívido (--sunfall-fire) fica só em preenchimentos autocontidos — botão, ícone, linha decorativa —
+     referenciados direto nos componentes, nunca por este token. */
+  --color-accent: var(--sunfall-slate);
+  --color-accent-rgb: var(--sunfall-slate-rgb);
+  --color-primary: var(--sunfall-slate);
+  --color-primary-rgb: var(--sunfall-slate-rgb);
   --color-primary-soft: var(--sunfall-cream);
   --color-primary-soft-rgb: 255, 212, 163;
 
@@ -68,7 +82,7 @@
   --color-border-medium: rgba(var(--sunfall-ivory-rgb), 0.16);
   --color-border-strong: rgba(var(--sunfall-ivory-rgb), 0.32);
   --color-border-card: rgba(var(--sunfall-ivory-rgb), 0.1);
-  --color-border-hover: var(--sunfall-fire);
+  --color-border-hover: var(--sunfall-slate);
 
   /* Aliases legados (componentes antigos ainda em uso: modal, consentimento, páginas legais) */
   --color-cream: var(--sunfall-ivory);
@@ -174,7 +188,7 @@
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
 
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 /* SCSS compat */

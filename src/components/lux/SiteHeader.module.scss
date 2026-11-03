@@ -8,7 +8,7 @@
 }
 
 .solid {
-  background: rgba(var(--sunfall-void-rgb), 0.82);
+  background: rgba(var(--sunfall-night-rgb), 0.82);
   backdrop-filter: blur(14px) saturate(120%);
   -webkit-backdrop-filter: blur(14px) saturate(120%);
   border-bottom-color: var(--color-border-subtle);
@@ -16,7 +16,7 @@
 
 /* Menu aberto: sem backdrop-filter, que faria do cabeçalho o bloco de contenção do menu fixo e o encolheria a 80 px */
 .open {
-  background: var(--sunfall-void);
+  background: var(--sunfall-night);
   border-bottom-color: var(--color-border-subtle);
 }
 
@@ -65,7 +65,7 @@
     inset: 72px 0 0;
     display: none;
     padding: 40px var(--gutter);
-    background: var(--sunfall-void);
+    background: var(--sunfall-night);
 
     ul {
       flex-direction: column;
@@ -111,7 +111,7 @@
     right: 0;
     bottom: 0;
     height: 1px;
-    background: var(--sunfall-fire);
+    background: var(--sunfall-slate);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform var(--dur-base) var(--ease-lux);
