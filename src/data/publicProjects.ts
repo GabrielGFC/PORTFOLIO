@@ -12,6 +12,78 @@ export interface AdditionalProject {
 
 export const additionalProjects: AdditionalProject[] = [
   {
+    id: "banco-vetorizado-ia",
+    title: "PostgreSQL Vetorial para IA",
+    titleEn: "Vector Search with PostgreSQL for AI",
+    stack: ["PostgreSQL", "pgvector", "Docker", "RAG"],
+    description:
+      "Entrega acadêmica com ambiente Docker Compose para PostgreSQL e pgvector, preparando busca vetorial e semântica para estudos de RAG.",
+    descriptionEn:
+      "Academic project with a Docker Compose PostgreSQL and pgvector environment for vector and semantic search experiments with RAG.",
+    linkLabel: "Abrir no GitHub",
+    url: "https://github.com/GabrielGFC/Banco-Vetorizado-para-IA",
+  },
+  {
+    id: "lista-compras-api",
+    title: "Lista de Compras API",
+    titleEn: "Shopping List API",
+    stack: ["AdonisJS 5", "TypeScript", "SQLite", "API REST"],
+    description:
+      "API de catálogo e compras com validação de estoque, relacionamentos e transações para manter a consistência dos registros.",
+    descriptionEn:
+      "Catalog and purchase API with stock validation, relational data and transactions to keep purchase records consistent.",
+    linkLabel: "Abrir no GitHub",
+    url: "https://github.com/GabrielGFC/lista-compras-api",
+  },
+  {
+    id: "ecoalertas",
+    title: "EcoAlertas — Backend ambiental",
+    titleEn: "EcoAlertas — Environmental Monitoring Backend",
+    stack: ["Express", "TypeScript", "TypeORM", "PostgreSQL"],
+    description:
+      "Backend conceitual para consolidar leituras ambientais de sensores e fontes públicas e gerar alertas de risco configuráveis.",
+    descriptionEn:
+      "Concept backend for combining environmental sensor readings and public sources to generate configurable risk alerts.",
+    linkLabel: "Abrir no GitHub",
+    url: "https://github.com/GabrielGFC/EcoAlertas-Back",
+  },
+  {
+    id: "eduverse-architecture",
+    title: "EduVerse — Estudo de arquitetura",
+    titleEn: "EduVerse — Architecture Study",
+    stack: ["Arquitetura de software", "Cloud", "Microsserviços", "Terraform"],
+    description:
+      "Estudo acadêmico de arquitetura para uma plataforma adaptativa complementar ao Moodle, com foco em cloud e microsserviços.",
+    descriptionEn:
+      "Academic architecture study for an adaptive learning platform alongside Moodle, focused on cloud and microservices.",
+    linkLabel: "Abrir no GitHub",
+    url: "https://github.com/GabrielGFC/eduverse-architecture-sad",
+  },
+  {
+    id: "foodflow-adr",
+    title: "FoodFlow — ADR de migração cloud",
+    titleEn: "FoodFlow — Cloud Migration ADR",
+    stack: ["Arquitetura de software", "ADR", "Cloud"],
+    description:
+      "Registro de decisão arquitetural acadêmico que documenta uma proposta de migração de um sistema para cloud.",
+    descriptionEn:
+      "Academic architecture decision record documenting a proposed migration of a system to the cloud.",
+    linkLabel: "Abrir no GitHub",
+    url: "https://github.com/GabrielGFC/foodflow-adr",
+  },
+  {
+    id: "shopfast-sqap",
+    title: "ShopFast — Plano de qualidade de software",
+    titleEn: "ShopFast — Software Quality Plan",
+    stack: ["Qualidade de software", "IEEE 730", "Riscos", "Quality gates"],
+    description:
+      "Artefato acadêmico de planejamento de qualidade, com critérios de qualidade e análise de riscos baseados em IEEE 730-2014.",
+    descriptionEn:
+      "Academic software quality planning artifact with quality criteria and risk analysis based on IEEE 730-2014.",
+    linkLabel: "Abrir no GitHub",
+    url: "https://github.com/GabrielGFC/shopfast-sqap",
+  },
+  {
     id: "todo-angular",
     title: "To-do List Angular",
     titleEn: "Angular To-do List",

@@ -82,7 +82,7 @@ export const featuredProjects: FeaturedProject[] = [
     roleShort:
       "Desenvolvi os 72 commits do repositório: backend em Python/FastAPI, IA local com fallback em nuvem, ranking de avaliadores, registro de convites e RBAC, além do frontend em Vue 3.",
     resultsPreview: [
-      "Ranking explicável de avaliadores, 6 ADRs, runbook de operação e 112 testes automatizados executados (mais 70 que exigem PostgreSQL).",
+      "Ranking explicável, 6 ADRs, runbook e 112 testes aprovados; outros 70 dependem de PostgreSQL e ficaram pendentes na medição registrada.",
     ],
     owner: true,
     hasRealMedia: true,
@@ -169,19 +169,17 @@ export const featuredProjects: FeaturedProject[] = [
     problem:
       "Controlar presença em eventos acadêmicos manualmente é lento e fácil de fraudar, sem visibilidade real de quem participou.",
     impact:
-      "Sistema de gestão de eventos acadêmicos com check-in por QR code e geolocalização, pontos por presença e auditoria de segurança documentada. Projeto pessoal avançado, com 353 testes unitários automatizados.",
-    stack: ["Node.js", "TypeScript", "Prisma", "PostgreSQL", "React/Vue"],
+      "Plataforma para explorar programação, inscrição e presença em eventos acadêmicos, com check-in por QR code, áreas por perfil e trilha de segurança documentada. A interface Vue está em transição e não é apresentada como produção.",
+    stack: ["Node.js", "Express", "Prisma", "PostgreSQL", "Vue 3", "TypeScript"],
     roleShort:
-      "Desenvolvi o backend e o frontend, o check-in por QR code e geolocalização e a correção de falhas de uma auditoria de segurança com 6 achados.",
+      "Implementei partes do backend e do frontend, os fluxos de presença e pontos, proteção CSRF e correções específicas de uma auditoria de segurança.",
     resultsPreview: [
-      "Auditoria com 6 achados (pontuação inflada e segredo do CSRF corrigidos), CI com concorrência em PostgreSQL e Playwright, e deploy configurado em Fly.io, Cloudflare e Vercel.",
+      "353 testes unitários passaram na medição registrada (182 backend, 171 frontend); validações de concorrência usaram PostgreSQL. A prontidão de produção e o cutover seguem pendentes.",
     ],
     owner: true,
     hasRealMedia: true,
     thumbnailKey: "jac",
-    caseStudy: {
-      referenceLink: "https://jac-front-end.vercel.app/",
-    },
+    caseStudy: {},
   },
   {
     id: "lion-fanstone",
@@ -197,7 +195,7 @@ export const featuredProjects: FeaturedProject[] = [
     roleShort:
       "Desenvolvi (83 de 83 commits) o backend em Java 21 e Spring Boot 4: arquitetura, domínio, migrações Flyway, integração SOAP com o CNPq/Lattes e decisões registradas em ADRs.",
     resultsPreview: [
-      "Em produção, com 31 controllers, 26 migrações, 482 testes automatizados (27 arquivos de integração) e CI.",
+      "Em produção: 31 controllers, 26 migrações Flyway, 482 testes automatizados e CI.",
     ],
     owner: true,
     hasRealMedia: true,

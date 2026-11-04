@@ -78,7 +78,7 @@
     "title": "Resumo profissional",
     "paragraph1": "Meu foco principal é Engenharia de Backend e desenvolvimento de sistemas institucionais. Trabalho com Laravel/PHP, Node.js/TypeScript e Java/Spring Boot, utilizando PostgreSQL, MySQL, SQL Server e outras tecnologias conforme os requisitos de cada solução.",
     "paragraph2": "Desenvolvo APIs REST, integrações entre sistemas, autenticação, controle de acesso, auditoria, filas e processamento assíncrono. Também participo da evolução de aplicações frontend com Vue.js e React quando o projeto exige atuação full stack.",
-    "paragraph2b": "Também tenho experiência prática com publicação e deploy em Cloudflare, Vercel e Fly.io, containers com Docker, pipelines de CI/CD no GitHub Actions (inclusive deploy para AWS S3 e CloudFront, em colaboração), acesso remoto a servidores via SSH, FTP/SFTP e WordPress.",
+    "paragraph2b": "Também trabalho com configurações e fluxos de publicação em Cloudflare, Vercel e Fly.io, containers Docker e CI/CD no GitHub Actions (incluindo deploy para AWS S3 e CloudFront em colaboração), além de acesso remoto via SSH, FTP/SFTP e WordPress.",
     "paragraph3": "Minha experiência inclui sistemas acadêmicos, plataformas de pesquisa, soluções editoriais, automações e aplicações institucionais desenvolvidas para a UniEVANGÉLICA, Fábrica de Tecnologias Turing e Força Aérea Brasileira. Tenho interesse crescente em arquitetura de software, cloud, observabilidade, segurança e Inteligência Artificial aplicada a sistemas de negócio."
   },
 
@@ -91,7 +91,7 @@
       "problem": "Encontrar pareceristas qualificados e compatíveis com cada manuscrito é um trabalho manual e lento para a equipe editorial.",
       "impact": "Apoia a seleção de pareceristas: classifica o manuscrito por área do CNPq com IA local e ranqueia avaliadores descobertos via OpenAlex e ORCID em quatro níveis, com justificativa rastreável. A decisão final continua com a equipe editorial.",
       "roleShort": "Desenvolvi os 72 commits do repositório: backend em Python/FastAPI, IA local com fallback em nuvem, ranking de avaliadores, registro de convites e RBAC, além do frontend em Vue 3.",
-      "result": "Ranking explicável de avaliadores, 6 ADRs, runbook de operação e 112 testes automatizados executados (mais 70 que exigem PostgreSQL).",
+      "result": "Ranking explicável, 6 ADRs, runbook e 112 testes aprovados; 70 testes dependentes de PostgreSQL foram pulados na medição registrada.",
       "cta": "Estudo de caso",
       "caseStudy": {
         "tabs": [
@@ -99,7 +99,7 @@
           { "key": "solucao", "title": "Impacto", "content": "Classificação temática de manuscritos por IA local (Ollama, com fallback em nuvem), qualificação de avaliadores em quatro níveis a partir de OpenAlex e ORCID, ranking com justificativa rastreável e registro de convites por manuscrito. Histórico enriquecido de convites e análise de recorrência estão no roadmap." },
           { "key": "arquitetura", "title": "Stack", "content": "Backend em Python/FastAPI sobre PostgreSQL, com IA local via Ollama (fallback em nuvem) para classificação temática, embeddings semânticos para o ranking e frontend em Vue 3 com Vite. Autenticação com Argon2 e RBAC, decisões registradas em 6 ADRs e execução em Docker." },
           { "key": "papel", "title": "Papel do Gabriel", "content": "Autor dos 72 commits do repositório: modelagem do domínio de avaliadores, ranking, integração com IA local, registro de convites, autenticação e testes." },
-          { "key": "resultados", "title": "Resultados", "content": ["Ranking explicável de avaliadores, 6 ADRs, runbook de operação e 112 testes automatizados executados (mais 70 que exigem PostgreSQL)."] }
+          { "key": "resultados", "title": "Resultados", "content": ["Ranking explicável, 6 ADRs e runbook de operação. Na medição registrada, 112 testes passaram e 70 testes dependentes de PostgreSQL foram pulados."] }
         ]
       }
     },
@@ -159,19 +159,20 @@
     },
     "jac": {
       "title": "JAC – Jornada Acadêmica e Comunitária",
-      "badge": "Projeto pessoal / Avançado",
-      "problem": "Controlar presença em eventos acadêmicos manualmente é lento e fácil de fraudar, sem visibilidade real de quem participou.",
-      "impact": "Sistema de gestão de eventos acadêmicos com check-in por QR code e geolocalização, pontos por presença e auditoria de segurança documentada. Projeto pessoal avançado, com 353 testes unitários automatizados.",
-      "roleShort": "Desenvolvi o backend e o frontend, o check-in por QR code e geolocalização e a correção de falhas de uma auditoria de segurança com 6 achados.",
-      "result": "Auditoria com 6 achados (pontuação inflada e segredo do CSRF corrigidos), CI com concorrência em PostgreSQL e Playwright, e deploy configurado em Fly.io, Cloudflare e Vercel.",
+      "badge": "Projeto pessoal · Plataforma em evolução",
+      "problem": "O projeto explora como reunir programação e inscrições de eventos acadêmicos e registrar presença de forma verificável, com acesso adequado a cada perfil.",
+      "impact": "Plataforma com catálogo público, inscrições, carteira de QR Code, pontos e áreas para participantes, equipe, coordenação e expositores. O check-in atual é por QR Code; a geolocalização está desativada nesta versão.",
+      "roleShort": "Implementei partes do backend e do frontend, fluxos de inscrição e presença, sessão com proteção CSRF e correções específicas após uma auditoria de segurança.",
+      "result": "Na medição registrada em 23/10/2026: 353 testes unitários passaram (182 backend, 171 frontend); 10 testes dependentes de PostgreSQL ficaram pulados. Concorrência foi validada localmente. Cutover e prontidão da produção seguem pendentes.",
       "cta": "Estudo de caso",
       "caseStudy": {
         "tabs": [
-          { "key": "problema", "title": "Contexto", "content": "Projeto pessoal para gestão de eventos acadêmicos, explorando check-in verificável e engajamento de participantes por meio de gamificação." },
-          { "key": "solucao", "title": "Impacto", "content": "Check-in por QR code e geolocalização, ledger de pontos com índice único (uma recompensa por inscrição), proteção CSRF, logs de auditoria e consentimentos, com auditoria de segurança de 6 achados documentada em docs." },
-          { "key": "arquitetura", "title": "Stack", "content": "Backend em Node.js/Express com Prisma e PostgreSQL, TypeScript estrito validado em alvos de build distintos (Node e Cloudflare Workers). Frontend em migração de React para Vue, com Vitest e Playwright." },
-          { "key": "papel", "title": "Papel do Gabriel", "content": "Autor de 82% dos commits do backend (159 de 194) e 98% do frontend (205 de 209): check-in, pontuação, CSRF e as correções da auditoria (SEC-001 com teste de regressão e SEC-004)." },
-          { "key": "resultados", "title": "Resultados", "content": ["353 testes unitários automatizados (backend 182, frontend 171), CI com teste de concorrência de check-in em PostgreSQL real e E2E com Playwright, mais auditorias de segurança e de dependências documentadas."] }
+          { "key": "problema", "title": "Contexto", "content": "O JAC explora uma plataforma para descobrir eventos acadêmicos, consultar programação, inscrever-se e registrar presença, com histórico e regras por perfil." },
+          { "key": "solucao", "title": "Fluxos implementados", "content": "Catálogo público e status dos eventos, inscrições, carteira com QR Code, presença, pontos, administração e captura de leads por expositores. A geolocalização está desativada nesta versão; a presença atual usa QR Code." },
+          { "key": "arquitetura", "title": "Arquitetura", "content": "Backend Node.js/Express 5, Prisma e PostgreSQL; frontend Vue 3, TypeScript, Pinia e Vue Router. A base React permanece no histórico de produção; a promoção da nova interface depende de um cutover ainda não aprovado." },
+          { "key": "papel", "title": "Minha atuação", "content": "Implementei funcionalidades de backend e frontend, fluxos de inscrição e presença, autenticação com sessão e proteção CSRF. Corrigi falhas específicas encontradas em auditoria, incluindo pontuação duplicada e configuração de CSRF." },
+          { "key": "seguranca", "title": "Segurança e privacidade", "content": "O projeto registra auditoria de segurança com seis achados; SEC-001 e SEC-004 foram tratados. Consentimentos para compartilhamento de leads são explícitos e revogáveis. O estado dos demais achados e as políticas institucionais precisam ser confirmados antes de qualquer alegação de conformidade." },
+          { "key": "resultados", "title": "Testes e estado", "content": ["Na rodada registrada em 23/10/2026, 353 testes unitários passaram: 182 no backend e 171 no frontend; 10 testes dependentes de PostgreSQL foram pulados. A validação de concorrência ocorreu localmente. Isso não conta os testes E2E como aprovados nem comprova o deploy atual.", "A prontidão de produção permanece pendente: API, configuração ativa do Worker, staging e cutover precisam de validação. Os repositórios são privados e não são expostos por link público neste case."] }
         ]
       }
     },
@@ -181,7 +182,7 @@
       "problem": "Um sistema institucional de pesquisa acadêmica em Laravel precisava evoluir para uma base mais sustentável, sem interromper o sistema em produção.",
       "impact": "Reescrita do backend de uma plataforma institucional de pesquisa acadêmica, migrando do sistema legado em Laravel para Java e Spring Boot, hoje em produção.",
       "roleShort": "Desenvolvi (83 de 83 commits) o backend em Java 21 e Spring Boot 4: arquitetura, domínio, migrações Flyway, integração SOAP com o CNPq/Lattes e decisões registradas em ADRs.",
-      "result": "Em produção, com 31 controllers, 26 migrações, 482 testes automatizados (27 arquivos de integração) e CI.",
+      "result": "Em produção, com 31 controllers, 26 migrações Flyway, 482 testes automatizados e CI.",
       "cta": "Estudo de caso",
       "caseStudy": {
         "tabs": [
@@ -189,7 +190,7 @@
           { "key": "solucao", "title": "Impacto", "content": "Reescrita incremental do backend em Java e Spring Boot: usuários e perfis com login multiperfil, permissões, auditoria, produção acadêmica (Qualis/CAPES e JCR), projetos com rascunho, anexos e aprovação, planos de trabalho com pontuação e importação de currículo Lattes via integração SOAP com o CNPq." },
           { "key": "arquitetura", "title": "Stack", "content": "Java 21, Spring Boot 4, PostgreSQL com Flyway (26 migrações versionadas), Spring Security por sessão e cookie com RBAC, ArchUnit para regras de arquitetura, Swagger e CI no GitHub Actions. Actuator restrito a health e info após achado de auditoria." },
           { "key": "papel", "title": "Papel do Gabriel", "content": "Autor de todos os commits do repositório (83 de 83): arquitetura, modelagem de domínio, migrações, integração SOAP com o CNPq/Lattes e ADRs que guiam a migração incremental do legado." },
-          { "key": "resultados", "title": "Resultados", "content": ["31 controllers, 29 entidades, 26 migrações, 482 testes automatizados (27 arquivos de integração com Spring ou Testcontainers) e CI, em produção."] }
+          { "key": "resultados", "title": "Resultados", "content": ["31 controllers REST, 26 migrações Flyway e 482 testes aprovados na suíte registrada, em produção. A divisão entre arquivos unitários e de integração ainda não foi reconferida."] }
         ]
       }
     },
@@ -740,9 +741,9 @@
       "archiveOpen": "Ver todos os projetos",
       "archiveClose": "Recolher projetos",
       "archiveTitle": "Arquivo",
-      "archiveAdditional": "Outros projetos e repositórios",
+      "archiveAdditional": "Projetos complementares e estudos",
       "openRepo": "Abrir repositório",
-      "repositoryCount": "77 repositórios no GitHub",
+      "repositoryCount": "Explore os repositórios públicos",
       "repositoryCountNote": "Projetos, estudos e colaborações",
       "githubProfile": "Ver perfil",
       "featuredLabel": "Em destaque",
@@ -771,7 +772,7 @@
       },
       "items": [
         { "key": "lionFanstone", "name": "James Fanstone — reescrita em Java", "summary": "Reescrita do backend de uma plataforma institucional de pesquisa, de Laravel para Java e Spring Boot.", "meta": "UniEVANGÉLICA · Em produção · 2026" },
-        { "key": "jac", "name": "JAC — Jornada Acadêmica e Comunitária", "summary": "Gestão de eventos acadêmicos com check-in por QR code e geolocalização.", "meta": "Projeto pessoal · 2025–2026" },
+        { "key": "jac", "name": "JAC — Jornada Acadêmica e Comunitária", "summary": "Plataforma de eventos acadêmicos com catálogo, inscrições e check-in atual por QR Code.", "meta": "Projeto pessoal · em evolução" },
         { "key": "aila", "name": "Aila", "summary": "Apoio à escolha de pareceristas, com IA local e ranking explicável.", "meta": "Plataforma editorial · 2026" },
         { "key": "maximiza", "name": "Maximiza Seguros", "summary": "Site institucional de corretora, com formulários de cotação e diretório de parceiros.", "meta": "Cliente · Em produção · 2026" }
       ],

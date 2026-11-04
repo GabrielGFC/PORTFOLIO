@@ -15,7 +15,7 @@ Suítes executadas localmente, sem alterar os repositórios (o `git status` de c
 | Maximiza (Vitest) | **239 passaram** (47 arquivos) | `vitest run` | |
 | Aila (pytest) | **112 passaram, 70 pulados** | `pytest backend/tests` em um ambiente virtual temporário | Os 70 pulados exigem `TEST_DATABASE_URL` (PostgreSQL). Dependências pesadas (`sentence-transformers`, `transformers`) não foram instaladas; não se sabe se algum dos 70 depende delas. O frontend do Aila não tem testes. |
 
-Como foram obtidos: cada comando foi executado na raiz do repositório correspondente, com a saída lida do resumo final da própria ferramenta (Jest, Vitest, pytest) ou dos relatórios XML do Gradle. Os valores publicados no site, a partir da mesma data: James Fanstone 482, JAC 353 unitários, Maximiza 239, Aila 112 executados (mais 70 que exigem PostgreSQL).
+Como foram obtidos: cada comando foi executado na raiz do repositório correspondente, com a saída lida do resumo final da própria ferramenta (Jest, Vitest, pytest) ou dos relatórios XML do Gradle. Valores medidos em 2026-10-23: James Fanstone 482; JAC 353 unitários (182 backend + 171 frontend); Maximiza 239; Aila 112 passaram e 70 foram pulados por dependerem de PostgreSQL. Não representam uma nova execução após essa data.
 
 Para reproduzir: rodar os mesmos comandos nas mesmas pastas; para fixar um número completo do JAC e do Aila é preciso Docker/PostgreSQL disponível.
 
@@ -23,7 +23,7 @@ Para reproduzir: rodar os mesmos comandos nas mesmas pastas; para fixar um núme
 
 - **Aila:** branch `main` (`36dd7f9`) com 72 commits; o `shortlog` agrupa 71 commits no e-mail acadêmico e 1 no e-mail noreply vinculado ao GitHub. O site foi atualizado de 68 para 72.
 - **Maximiza Seguros:** branch `main` (`250776d`) com 242 commits: 215 humanos de Gabriel em quatro identidades e 27 de `github-actions[bot]`, usados pela sincronização automática. O site foi atualizado para descrever as duas contagens separadamente.
-- O total informado pelo usuário para a conta GitHub é **77 repositórios**. O site apresenta esse total como acesso ao perfil, sem chamar cada repositório de projeto autoral.
+- O usuário informa **77 repositórios no total**. A página pública do perfil mostrou 41; a conexão GitHub listou 42 próprios (41 públicos e `SystemsAtlas` privado), além de 3 como colaborador. O total de 77 não foi reconciliado; o site agora aponta aos repositórios públicos sem publicar uma contagem.
 
 Repositórios lidos:
 
@@ -35,6 +35,8 @@ Repositórios lidos:
 | Maximiza Seguros | `Externo/maximiza-seguros` | 210 |
 
 Legenda: **Confirmado** = bate com código ou documentação do repositório. **Divergente** = o texto atual do site e a fonte não coincidem. **Pergunta** = preciso da sua resposta antes de escrever.
+
+Em 2026-11-04, o case JAC foi reescrito para remover o link Vercel legado, não apresentar geolocalização como fluxo ativo e separar a medição histórica de testes da prontidão de produção. Os dois repositórios JAC consultados são privados; não expor links de código no portfólio público.
 
 ## 1. James Fanstone (Java)
 
@@ -93,7 +95,7 @@ Legenda: **Confirmado** = bate com código ou documentação do repositório. **
 
 **Confirmado**
 - Backend Python/FastAPI, PostgreSQL, frontend Vue 3 + Vite (o Nuxt 3 é legado), Docker, Ollama em LAN com fallback Groq (ADR 0006), OpenAlex e ORCID, ranking em 4 níveis (Contato Acadêmico, Candidato, Ativo, Sênior) com justificativa rastreável.
-- 6 ADRs (0001 a 0006), `runbook.md` e `troubleshooting.md`. 178 funções `test_` no backend por busca de padrão. **Medido executando:** 112 passaram e 70 foram pulados por falta de PostgreSQL (ver "Medições de testes"); o site agora diz 112 executados, mais 70 que exigem PostgreSQL.
+- 6 ADRs (0001 a 0006), `runbook.md` e `troubleshooting.md`. 178 funções `test_` no backend por busca de padrão. **Medido executando:** 112 passaram e 70 foram pulados por falta de PostgreSQL (ver "Medições de testes").
 - O README afirma: "apoio à decisão, não decisor". O site já diz isso.
 - Roadmap: v0.2 concluída; v0.3 (observabilidade de IA, curadoria em lote, opt-out LGPD) planejada. O site já marca recorrência e histórico enriquecido como roadmap.
 

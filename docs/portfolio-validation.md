@@ -69,7 +69,7 @@ Peso total da página: Home 301 KiB, Trajetória 215 KiB, Projeto 254 KiB. As im
 
 ## 4. Conteúdo
 
-Os números de testes publicados vêm de `docs/portfolio-case-study-evidence.md` (seção "Medições de testes", 2026-10-23): James Fanstone 482, JAC 353 unitários, Maximiza 239, Aila 112 executados (mais 70 que exigem PostgreSQL).
+Os números de testes publicados vêm de `docs/portfolio-case-study-evidence.md` (seção "Medições de testes", 2026-10-23): James Fanstone 482, JAC 353 unitários, Maximiza 239, Aila 112 aprovados e 70 pulados por dependerem de PostgreSQL. São medições daquela data, não uma execução atual.
 
 ## 5. Limites e não verificado
 
