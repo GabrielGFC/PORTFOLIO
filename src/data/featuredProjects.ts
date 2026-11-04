@@ -80,7 +80,7 @@ export const featuredProjects: FeaturedProject[] = [
       "Apoia a seleção de pareceristas: classifica o manuscrito por área do CNPq com IA local e ranqueia avaliadores descobertos via OpenAlex e ORCID em quatro níveis, com justificativa rastreável. A decisão final continua com a equipe editorial.",
     stack: ["Python", "FastAPI", "Vue 3", "PostgreSQL", "Ollama/IA local"],
     roleShort:
-      "Desenvolvi (68 de 68 commits) o backend em Python/FastAPI, com IA local e fallback em nuvem, ranking de avaliadores, registro de convites e RBAC, e o frontend em Vue 3.",
+      "Desenvolvi os 72 commits do repositório: backend em Python/FastAPI, IA local com fallback em nuvem, ranking de avaliadores, registro de convites e RBAC, além do frontend em Vue 3.",
     resultsPreview: [
       "Ranking explicável de avaliadores, 6 ADRs, runbook de operação e 112 testes automatizados executados (mais 70 que exigem PostgreSQL).",
     ],
@@ -101,7 +101,7 @@ export const featuredProjects: FeaturedProject[] = [
       "Site institucional em produção, com formulários multietapas de cotação, diretório de imobiliárias parceiras sincronizado diariamente e conteúdo corporativo.",
     stack: ["Vue 3", "TypeScript", "Tailwind 4", "Cloudflare", "GitHub Actions"],
     roleShort:
-      "Desenvolvi (207 de 210 commits) o site em Vue 3, TypeScript e Tailwind 4, com arquitetura modular, formulários de cotação e CI com tipos, lint e testes.",
+      "Desenvolvi o site em Vue 3, TypeScript e Tailwind 4. O histórico da branch principal tem 215 commits humanos meus e 27 commits automáticos de sincronização.",
     resultsPreview: [
       "Site em produção, com 239 testes automatizados e sincronização diária de parceiros.",
     ],

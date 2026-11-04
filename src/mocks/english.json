@@ -90,7 +90,7 @@
       "badge": "Institutional / Editorial Platform",
       "problem": "Finding qualified reviewers who match a manuscript's topic is slow, manual work for a journal's editorial team.",
       "impact": "Supports reviewer selection: classifies the manuscript by CNPq area with local AI and ranks reviewers discovered via OpenAlex and ORCID across four tiers, with a traceable justification. The final decision stays with the editorial team.",
-      "roleShort": "I built (68 of 68 commits) the Python/FastAPI backend, with local AI and a cloud fallback, reviewer ranking, invitation records and RBAC, plus the Vue 3 frontend.",
+      "roleShort": "I authored all 72 repository commits: a Python/FastAPI backend, local AI with a cloud fallback, reviewer ranking, invitation records and RBAC, plus the Vue 3 frontend.",
       "result": "Explainable reviewer ranking, 6 ADRs, an operations runbook and 112 automated tests run (plus 70 that require PostgreSQL).",
       "cta": "Case study",
       "caseStudy": {
@@ -98,7 +98,7 @@
           { "key": "problema", "title": "Context", "content": "A platform supporting the scientific editorial process, using academic data and review history to help identify reviewers who match a given manuscript." },
           { "key": "solucao", "title": "Impact", "content": "Thematic classification of manuscripts by local AI (Ollama, with a cloud fallback), reviewer qualification in four tiers from OpenAlex and ORCID, ranking with a traceable justification, and invitation records per manuscript. Richer invitation history and recurrence analysis are on the roadmap." },
           { "key": "arquitetura", "title": "Stack", "content": "Python/FastAPI backend on PostgreSQL, with local AI via Ollama (cloud fallback) for thematic classification, semantic embeddings for ranking, and a Vue 3 (Vite) frontend. Argon2 authentication and RBAC, decisions recorded in 6 ADRs, and Docker deployment." },
-          { "key": "papel", "title": "My role", "content": "Author of every commit in the repository (68 of 68): reviewer domain modeling, ranking, local-AI integration, invitation records, authentication, and tests." },
+          { "key": "papel", "title": "My role", "content": "Author of all 72 repository commits: reviewer domain modeling, ranking, local-AI integration, invitation records, authentication, and tests." },
           { "key": "resultados", "title": "Results", "content": ["Explainable reviewer ranking, 6 ADRs, an operations runbook and 112 automated tests run (plus 70 that require PostgreSQL)."] }
         ]
       }
@@ -108,7 +108,7 @@
       "badge": "Client / Production",
       "problem": "An insurance brokerage needed an institutional site to showcase its catalog and receive online quote requests, without relying on manual outreach.",
       "impact": "Institutional site in production, with multi-step quote forms, a partner real-estate directory synced daily, and corporate content.",
-      "roleShort": "I built (207 of 210 commits) the site in Vue 3, TypeScript and Tailwind 4, with a modular architecture, quote forms and CI covering types, lint and tests.",
+      "roleShort": "I built the site in Vue 3, TypeScript and Tailwind 4. The main branch has 215 human commits by me and 27 automated sync commits.",
       "result": "Site in production, with 239 automated tests and a daily partner sync.",
       "cta": "Case study",
       "caseStudy": {
@@ -116,7 +116,7 @@
           { "key": "problema", "title": "Context", "content": "Institutional site for an insurance brokerage, with a solutions catalog, online quotes, and corporate content." },
           { "key": "solucao", "title": "Impact", "content": "Multi-step quote forms (Fiança and Moto), a partner real-estate directory synced daily from the brokerage's public API, and institutional pages." },
           { "key": "arquitetura", "title": "Stack", "content": "Vue 3, TypeScript, Vite, and Tailwind 4 with i18n, published on Cloudflare as static assets. GitHub Actions CI with types, lint, formatting, tests, and build, plus a scheduled workflow for the partner sync." },
-          { "key": "papel", "title": "My role", "content": "Author of most of the code (207 of 210 commits): feature-based modular architecture, quote forms, partner sync, and CI gates." },
+          { "key": "papel", "title": "My role", "content": "Author of the 215 human commits on the main branch; the other 27 are automated commits from the daily sync workflow. I built the modular architecture, quote forms and CI gates." },
           { "key": "resultados", "title": "Results", "content": ["Site in production, with 239 automated tests and a daily sync of partner data."] }
         ]
       }
@@ -404,8 +404,8 @@
       },
       {
         "title": "Desafio-PicPay",
-        "tags": ["TypeScript", "Node.js", "WebSockets"],
-        "description": "Functional PicPay clone with authentication and WebSockets for real-time communication between users.",
+        "tags": ["NestJS", "TypeScript", "Sequelize", "PostgreSQL"],
+        "description": "Task management API with JWT authentication and CRUD operations, built with NestJS, TypeScript, Sequelize and PostgreSQL.",
         "button": {
           "link": "https://github.com/GabrielGFC/Desafio-PicPay",
           "text": "View Repository"
@@ -740,8 +740,11 @@
       "archiveOpen": "See all projects",
       "archiveClose": "Collapse projects",
       "archiveTitle": "Archive",
-      "archivePublic": "Public repositories",
+      "archiveAdditional": "More projects and repositories",
       "openRepo": "Open repository",
+      "repositoryCount": "77 repositories on GitHub",
+      "repositoryCountNote": "Projects, studies and collaborations",
+      "githubProfile": "View profile",
       "featuredLabel": "Featured",
       "moreLabel": "Also in the portfolio",
       "diagrams": {

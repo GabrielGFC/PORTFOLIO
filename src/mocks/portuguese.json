@@ -90,7 +90,7 @@
       "badge": "Institucional / Plataforma Editorial",
       "problem": "Encontrar pareceristas qualificados e compatíveis com cada manuscrito é um trabalho manual e lento para a equipe editorial.",
       "impact": "Apoia a seleção de pareceristas: classifica o manuscrito por área do CNPq com IA local e ranqueia avaliadores descobertos via OpenAlex e ORCID em quatro níveis, com justificativa rastreável. A decisão final continua com a equipe editorial.",
-      "roleShort": "Desenvolvi (68 de 68 commits) o backend em Python/FastAPI, com IA local e fallback em nuvem, ranking de avaliadores, registro de convites e RBAC, e o frontend em Vue 3.",
+      "roleShort": "Desenvolvi os 72 commits do repositório: backend em Python/FastAPI, IA local com fallback em nuvem, ranking de avaliadores, registro de convites e RBAC, além do frontend em Vue 3.",
       "result": "Ranking explicável de avaliadores, 6 ADRs, runbook de operação e 112 testes automatizados executados (mais 70 que exigem PostgreSQL).",
       "cta": "Estudo de caso",
       "caseStudy": {
@@ -98,7 +98,7 @@
           { "key": "problema", "title": "Contexto", "content": "Plataforma voltada ao apoio do processo editorial científico, utilizando dados acadêmicos e histórico de avaliações para auxiliar na identificação de pareceristas compatíveis com manuscritos." },
           { "key": "solucao", "title": "Impacto", "content": "Classificação temática de manuscritos por IA local (Ollama, com fallback em nuvem), qualificação de avaliadores em quatro níveis a partir de OpenAlex e ORCID, ranking com justificativa rastreável e registro de convites por manuscrito. Histórico enriquecido de convites e análise de recorrência estão no roadmap." },
           { "key": "arquitetura", "title": "Stack", "content": "Backend em Python/FastAPI sobre PostgreSQL, com IA local via Ollama (fallback em nuvem) para classificação temática, embeddings semânticos para o ranking e frontend em Vue 3 com Vite. Autenticação com Argon2 e RBAC, decisões registradas em 6 ADRs e execução em Docker." },
-          { "key": "papel", "title": "Papel do Gabriel", "content": "Autor de todos os commits do repositório (68 de 68): modelagem do domínio de avaliadores, ranking, integração com IA local, registro de convites, autenticação e testes." },
+          { "key": "papel", "title": "Papel do Gabriel", "content": "Autor dos 72 commits do repositório: modelagem do domínio de avaliadores, ranking, integração com IA local, registro de convites, autenticação e testes." },
           { "key": "resultados", "title": "Resultados", "content": ["Ranking explicável de avaliadores, 6 ADRs, runbook de operação e 112 testes automatizados executados (mais 70 que exigem PostgreSQL)."] }
         ]
       }
@@ -108,7 +108,7 @@
       "badge": "Cliente / Produção",
       "problem": "Uma corretora de seguros precisava de um site institucional para apresentar seu catálogo e receber pedidos de cotação online, sem depender de atendimento manual.",
       "impact": "Site institucional em produção, com formulários multietapas de cotação, diretório de imobiliárias parceiras sincronizado diariamente e conteúdo corporativo.",
-      "roleShort": "Desenvolvi (207 de 210 commits) o site em Vue 3, TypeScript e Tailwind 4, com arquitetura modular, formulários de cotação e CI com tipos, lint e testes.",
+      "roleShort": "Desenvolvi o site em Vue 3, TypeScript e Tailwind 4. A branch principal tem 215 commits humanos meus e 27 commits automáticos de sincronização.",
       "result": "Site em produção, com 239 testes automatizados e sincronização diária de parceiros.",
       "cta": "Estudo de caso",
       "caseStudy": {
@@ -116,7 +116,7 @@
           { "key": "problema", "title": "Contexto", "content": "Site institucional para uma corretora de seguros, com catálogo de soluções, cotação online e conteúdo corporativo." },
           { "key": "solucao", "title": "Impacto", "content": "Formulários multietapas de cotação (Fiança e Moto), diretório de imobiliárias parceiras sincronizado todo dia a partir da API pública da corretora e páginas institucionais." },
           { "key": "arquitetura", "title": "Stack", "content": "Vue 3, TypeScript, Vite e Tailwind 4 com i18n, publicados em Cloudflare como assets estáticos. CI no GitHub Actions com tipos, lint, formatação, testes e build, e um workflow agendado para a sincronização de parceiros." },
-          { "key": "papel", "title": "Papel do Gabriel", "content": "Autor da maior parte do código (207 de 210 commits): arquitetura modular por feature, formulários de cotação, sincronização de parceiros e gates de CI." },
+          { "key": "papel", "title": "Papel do Gabriel", "content": "Autor dos 215 commits humanos da branch principal; os outros 27 são commits automáticos do workflow de sincronização diária. Implementei a arquitetura modular, os formulários de cotação e os gates de CI." },
           { "key": "resultados", "title": "Resultados", "content": ["Site em produção, com 239 testes automatizados e sincronização diária dos dados de parceiros."] }
         ]
       }
@@ -404,8 +404,8 @@
       },
       {
         "title": "Desafio-PicPay",
-        "tags": ["TypeScript", "Node.js", "WebSockets"],
-        "description": "Clone funcional do PicPay com autenticação e WebSockets para comunicação em tempo real entre usuários.",
+        "tags": ["NestJS", "TypeScript", "Sequelize", "PostgreSQL"],
+        "description": "API de gerenciamento de tarefas com autenticação JWT e operações CRUD, desenvolvida com NestJS, TypeScript, Sequelize e PostgreSQL.",
         "button": {
           "link": "https://github.com/GabrielGFC/Desafio-PicPay",
           "text": "Ver Repositório"
@@ -740,8 +740,11 @@
       "archiveOpen": "Ver todos os projetos",
       "archiveClose": "Recolher projetos",
       "archiveTitle": "Arquivo",
-      "archivePublic": "Repositórios públicos",
+      "archiveAdditional": "Outros projetos e repositórios",
       "openRepo": "Abrir repositório",
+      "repositoryCount": "77 repositórios no GitHub",
+      "repositoryCountNote": "Projetos, estudos e colaborações",
+      "githubProfile": "Ver perfil",
       "featuredLabel": "Em destaque",
       "moreLabel": "Também no portfólio",
       "diagrams": {

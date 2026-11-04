@@ -1,82 +1,96 @@
-export interface PublicProject {
+export interface AdditionalProject {
   id: string;
   title: string;
+  titleEn: string;
   stack: string[];
   description: string;
+  descriptionEn: string;
   linkLabel?: string;
   url?: string;
   isFallback?: boolean;
 }
 
-export const publicProjects: PublicProject[] = [
+export const additionalProjects: AdditionalProject[] = [
   {
     id: "todo-angular",
     title: "To-do List Angular",
+    titleEn: "Angular To-do List",
     stack: ["Angular", "TypeScript"],
     description:
-      "Primeiro projeto em Angular: aplicação de tarefas com componentização, formulários reativos e gerenciamento de estado. Demonstra adoção de novas stacks e boas práticas do framework.",
+      "Aplicação de tarefas em Angular com componentes, formulários reativos e gerenciamento de estado.",
+    descriptionEn:
+      "Angular task app with reusable components, reactive forms and state management.",
     linkLabel: "Abrir no GitHub",
     url: "https://github.com/GabrielGFC/To-do-List-Agular",
   },
   {
     id: "disponibilidade-baan",
     title: "Disponibilidade BAAN — Backend",
+    titleEn: "BAAN Availability — Backend",
     stack: ["Node.js", "JavaScript"],
     description:
-      "CRUD do sistema de disponibilidade utilizado na BAAN, com gestão de horários e regras de negócio. Demonstra capacidade de entregar soluções backend aplicadas ao contexto corporativo.",
+      "Clone de um backend de disponibilidade em Node.js, com operações CRUD para registros e regras de horários.",
+    descriptionEn:
+      "Clone-based Node.js availability backend with CRUD operations for records and scheduling rules.",
     linkLabel: "Ver repositório",
     url: "https://github.com/GabrielGFC/Disponibilidade-BAAN-backend",
   },
   {
     id: "product-api",
     title: "ProductAPI",
-    stack: ["Node.js", "TypeScript", "PostgreSQL"],
+    titleEn: "ProductAPI",
+    stack: ["NestJS", "TypeScript", "PostgreSQL", "Docker"],
     description:
-      "API REST completa para gestão de produtos com operações CRUD, validações, tratamento de erros, paginação e documentação OpenAPI. Demonstra capacidade de desenvolver APIs bem estruturadas e documentadas.",
+      "API REST de produtos com upload de imagens, PostgreSQL, documentação Swagger e execução via Docker.",
+    descriptionEn:
+      "Product REST API with image uploads, PostgreSQL, Swagger documentation and Docker setup.",
     linkLabel: "Ver repositório",
     url: "https://github.com/GabrielGFC/ProductAPI",
   },
   {
     id: "desafio-picpay",
     title: "Desafio PicPay",
-    stack: ["Node.js", "TypeScript", "WebSockets"],
+    titleEn: "PicPay Coding Challenge",
+    stack: ["NestJS", "TypeScript", "Sequelize", "PostgreSQL"],
     description:
-      "Replica fluxos do PicPay com autenticação, fila de transferências e comunicação em tempo real via WebSockets. Demonstra conhecimento em comunicação assíncrona e sistemas de pagamento.",
+      "API de gerenciamento de tarefas com autenticação JWT e operações CRUD, desenvolvida como desafio técnico em NestJS, TypeScript, Sequelize e PostgreSQL.",
+    descriptionEn:
+      "Task management API with JWT authentication and CRUD operations, built as a coding challenge with NestJS, TypeScript, Sequelize and PostgreSQL.",
     linkLabel: "Abrir no GitHub",
     url: "https://github.com/GabrielGFC/Desafio-PicPay",
   },
   {
     id: "teste-php-laravel",
-    title: "Teste PHP Laravel",
+    title: "Prática de API com Laravel",
+    titleEn: "Laravel API Practice",
     stack: ["PHP", "Laravel", "MySQL"],
     description:
-      "Laboratório público em Laravel com APIs REST, autenticação e suíte de testes. Demonstra conhecimento prático em Laravel e boas práticas de desenvolvimento backend.",
+      "Projeto público de prática com Laravel, API REST, autenticação e testes.",
+    descriptionEn:
+      "Public Laravel practice project with a REST API, authentication and tests.",
     linkLabel: "Ver repositório",
     url: "https://github.com/GabrielGFC/teste-php-laravel",
   },
   {
     id: "cannasys",
-    title: "CannaSYS — ERP para Associações de Cannabis Medicinal",
+    title: "CannaSYS — Gestão para Associações de Cannabis Medicinal",
+    titleEn: "CannaSYS — Management for Medical-Cannabis Associations",
     stack: ["Node.js", "Vue 3", "PostgreSQL"],
     description:
-      "ERP open-source em desenvolvimento para associações de cannabis medicinal, com módulos de produção, dispensação, prescrição e auditoria, 12 migrações e logging com Winston.",
+      "Projeto open source em desenvolvimento para fluxos de gestão de associações de cannabis medicinal, com backend em Node.js e interface Vue 3.",
+    descriptionEn:
+      "Open-source project in development for management workflows at medical-cannabis associations, with a Node.js backend and Vue 3 interface.",
     linkLabel: "Ver repositório",
     url: "https://github.com/GabrielGFC/restapi-cannays",
   },
   {
-    id: "nuclei-security-lab",
-    title: "Nuclei Security Lab",
-    stack: ["Nuclei", "ProjectDiscovery", "Docker"],
-    description:
-      "Laboratório pessoal de estudo aplicado em automação de varredura de vulnerabilidades web com Nuclei e ferramentas do ecossistema ProjectDiscovery.",
-    linkLabel: "Ver repositório",
-    url: "https://github.com/GabrielGFC/nuclei",
-  },
-  {
     id: "fronteiras-script-automacao",
     title: "Automação Editorial — Revista Fronteiras",
+    titleEn: "Editorial Automation — Fronteiras Journal",
     stack: ["Python", "Selenium", "OJS 3.3"],
     description:
-      "Automação da revisão de submissões antigas em um sistema editorial OJS 3.3, com execução resumível, novas tentativas automáticas, tolerância a falhas e relatório xlsx de pendências.",
+      "Automação de fluxos editoriais em OJS com Python e Selenium, execução retomável e relatório de pendências.",
+    descriptionEn:
+      "Python and Selenium automation for editorial workflows in OJS, with resumable runs and a report of pending items.",
   },
 ];

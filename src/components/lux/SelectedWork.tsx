@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { featuredProjects, type FeaturedText } from "../../data/featuredProjects";
-import { publicProjects } from "../../data/publicProjects";
+import { additionalProjects } from "../../data/publicProjects";
 import { MaskedTitle, Reveal, duration, ease } from "../../motion/motion";
 import ProjectVisual from "./ProjectVisual";
 import styles from "./SelectedWork.module.scss";
@@ -65,7 +65,7 @@ const ProjectCard: React.FC<{
 };
 
 const SelectedWork: React.FC = () => {
-  const { data } = useContext(LanguageContext);
+  const { data, langKey } = useContext(LanguageContext);
   const t = data.lux.work;
   const reduce = !!useReducedMotion();
   const [archiveOpen, setArchiveOpen] = useState(false);
@@ -163,13 +163,15 @@ const SelectedWork: React.FC = () => {
                   })}
                 </ul>
 
-                <h3 className={styles.archiveTitle}>{t.archivePublic}</h3>
+                <h3 className={styles.archiveTitle}>{t.archiveAdditional}</h3>
                 <ul className={styles.rows}>
-                  {publicProjects.map((repo) => (
+                  {additionalProjects.map((repo) => (
                     <li key={repo.id} className={styles.row}>
                       <span className={styles.rowName}>
-                        {repo.title}
-                        <span className={styles.rowDesc}>{repo.description}</span>
+                        {langKey === "pt" ? repo.title : repo.titleEn}
+                        <span className={styles.rowDesc}>
+                          {langKey === "pt" ? repo.description : repo.descriptionEn}
+                        </span>
                       </span>
                       <span className={styles.rowMeta}>{repo.stack.join(" · ")}</span>
                       {repo.url ? (
@@ -181,6 +183,18 @@ const SelectedWork: React.FC = () => {
                       )}
                     </li>
                   ))}
+                  <li className={styles.row}>
+                    <span className={styles.rowName}>{t.repositoryCount}</span>
+                    <span className={styles.rowMeta}>{t.repositoryCountNote}</span>
+                    <a
+                      className={styles.rowAction}
+                      href="https://github.com/GabrielGFC?tab=repositories"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t.githubProfile} <span aria-hidden="true">↗</span>
+                    </a>
+                  </li>
                 </ul>
               </motion.div>
             )}

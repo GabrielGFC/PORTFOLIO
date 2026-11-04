@@ -19,6 +19,12 @@ Como foram obtidos: cada comando foi executado na raiz do repositório correspon
 
 Para reproduzir: rodar os mesmos comandos nas mesmas pastas; para fixar um número completo do JAC e do Aila é preciso Docker/PostgreSQL disponível.
 
+## Atualização de autoria (2026-11-04)
+
+- **Aila:** branch `main` (`36dd7f9`) com 72 commits; o `shortlog` agrupa 71 commits no e-mail acadêmico e 1 no e-mail noreply vinculado ao GitHub. O site foi atualizado de 68 para 72.
+- **Maximiza Seguros:** branch `main` (`250776d`) com 242 commits: 215 humanos de Gabriel em quatro identidades e 27 de `github-actions[bot]`, usados pela sincronização automática. O site foi atualizado para descrever as duas contagens separadamente.
+- O total informado pelo usuário para a conta GitHub é **77 repositórios**. O site apresenta esse total como acesso ao perfil, sem chamar cada repositório de projeto autoral.
+
 Repositórios lidos:
 
 | Projeto | Caminho local | Commits |
