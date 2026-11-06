@@ -689,20 +689,22 @@
     "nav": {
       "label": "Main navigation",
       "home": "Home",
-      "work": "Work",
+      "work": "Projects",
       "journey": "Journey",
       "about": "About",
       "contact": "Contact",
+      "cta": "Get in touch",
       "resume": "Resume",
       "menu": "Open menu",
       "close": "Close menu",
       "language": "Switch to Portuguese"
     },
     "hero": {
-      "eyebrow": "Software engineering · Backend · APIs",
+      "eyebrow": "Software developer · Back-end and front-end",
       "line1": "Gabriel Fernandes",
       "line2": "de Carvalho",
-      "statement": "I build systems, APIs, and software solutions focused on architecture, quality, and real impact.",
+      "statement": "I solve problems with software. I build the part people use (the screens of a website or system) and the part behind it (servers, databases and integrations). I have put systems live for a university and for companies.",
+      "playHint": "Tip: move your mouse or tap the screen. The background reacts.",
       "primary": "Explore projects",
       "secondary": "Get in touch",
       "markLabel": "GFC monogram",
@@ -710,10 +712,10 @@
       "location": "Anápolis, Brazil · remote",
       "numbersLabel": "By the numbers",
       "numbers": [
-        { "value": "482", "label": "automated tests in the Java backend rewrite" },
-        { "value": "31", "label": "controllers in the same system" },
-        { "value": "26", "label": "versioned database migrations" },
-        { "value": "3+", "label": "years on UniEVANGÉLICA institutional systems" }
+        { "value": "6", "label": "live sites and systems you can visit" },
+        { "value": "3+", "label": "years building systems for UniEVANGÉLICA" },
+        { "value": "482", "label": "automated tests in the system I rewrote in Java" },
+        { "value": "2", "label": "sides: what you see (front-end) and what runs behind it (back-end)" }
       ],
       "scroll": "Scroll to continue",
       "credentialsLabel": "Credentials",
@@ -735,8 +737,35 @@
       "home": "Back to home"
     },
     "work": {
-      "eyebrow": "Selected work",
-      "title": "Four projects that show how I work.",
+      "eyebrow": "Projects",
+      "title": "Live projects. Click and see them working.",
+      "liveIntro": "Real systems used by real people. Each card opens the published site.",
+      "openSite": "Open the site",
+      "details": "See details",
+      "whatIs": "What it is",
+      "myPart": "What I did",
+      "techTitle": "Technologies used",
+      "techHint": "Tags with the tool names, for readers from the technical field.",
+      "techLabels": {
+        "front": "Screens (front-end)",
+        "back": "Behind the scenes (back-end)",
+        "db": "Database",
+        "infra": "Publishing and automation",
+        "before": "Old system (before the rewrite)"
+      },
+      "othersLabel": "Other projects, no public site yet",
+      "live": [
+        { "key": "esports", "name": "UniEVANGÉLICA E-Sports Portal", "meta": "UniEVANGÉLICA · 5th edition · 2026", "plain": "Official site of the university's e-sports championship: students sign up by game category and past editions stay available for consultation.", "role": "With another developer, I built the screens and the server side, including security fixes." },
+        { "key": "lionFanstone", "name": "James Fanstone", "meta": "UniEVANGÉLICA · In production", "plain": "The university's academic research platform, used daily by its team. I rewrote the back of the system on more modern technologies, without stopping its use.", "role": "Author of all 83 code commits of the rewrite. Before that, I contributed to the old system as part of a team." },
+        { "key": "maximiza", "name": "Maximiza Seguros", "meta": "Client · 2026", "plain": "Website of an insurance broker: customers request quotes online through step-by-step forms and find partner real-estate agencies.", "role": "I built the whole site, with automated tests and a daily update of the partner list." },
+        { "key": "coneleste", "name": "Cone Leste Seguros", "meta": "Client · Collaboration", "plain": "Campaign page announcing the union of two insurance brokers and sending visitors to the main site.", "role": "I helped finish it, as part of a team: site icon, description and external link." },
+        { "key": "farmxp", "name": "Dev XP Auto-Farm", "meta": "Personal project", "plain": "My resume as a game: missions, technologies and contact, with a retro pixel-art look.", "role": "I conceived, designed and published it on my own." },
+        { "key": "jac", "name": "JAC — Academic and Community Journey", "meta": "Personal project · in development", "plain": "Platform for academic events: schedule, sign-up and QR-code attendance. Published version, still evolving.", "role": "I built parts of the server and the screens: QR-code attendance, points and security fixes." }
+      ],
+      "others": [
+        { "key": "aila", "name": "Aila", "meta": "Editorial platform · 2026", "plain": "Helps a scientific journal choose who reviews each paper, with local artificial intelligence and a reason for each suggestion." },
+        { "key": "pasteur", "name": "Pasteur", "meta": "Public project · GitHub", "plain": "Server of a health application, with prescriptions and care workflows." }
+      ],
       "caseStudy": "View case study",
       "archiveOpen": "See all projects",
       "archiveClose": "Collapse projects",
@@ -746,8 +775,6 @@
       "repositoryCount": "Explore public repositories",
       "repositoryCountNote": "Projects, studies and collaborations",
       "githubProfile": "View profile",
-      "featuredLabel": "Featured",
-      "moreLabel": "Also in the portfolio",
       "diagrams": {
         "scrollable": "diagram, scrolls horizontally",
         "lion": {
@@ -770,18 +797,8 @@
           "humanSub": "Editorial team"
         }
       },
-      "items": [
-        { "key": "lionFanstone", "name": "James Fanstone — Java rewrite", "summary": "Backend rewrite of an institutional research platform, from Laravel to Java and Spring Boot.", "meta": "UniEVANGÉLICA · In production · 2026" },
-        { "key": "jac", "name": "JAC — Academic and Community Journey", "summary": "Academic events platform with a catalog, registration and current QR-code check-in.", "meta": "Personal project · in development" },
-        { "key": "aila", "name": "Aila", "summary": "Support for choosing peer reviewers, with local AI and an explainable ranking.", "meta": "Editorial platform · 2026" },
-        { "key": "maximiza", "name": "Maximiza Seguros", "summary": "Institutional site for an insurance broker, with quote forms and a partner directory.", "meta": "Client · In production · 2026" }
-      ],
       "archive": [
-        { "key": "esports", "meta": "UniEVANGÉLICA · 2026" },
-        { "key": "fanstoneLegacy", "meta": "UniEVANGÉLICA · In production · 2025–2026" },
-        { "key": "coneleste", "meta": "Client · Collaboration · 2026" },
-        { "key": "pasteur", "meta": "Public project" },
-        { "key": "farmxp", "meta": "Personal product" }
+        { "key": "fanstoneLegacy", "meta": "UniEVANGÉLICA · In production · 2025–2026" }
       ]
     },
     "experience": {
@@ -800,8 +817,8 @@
     },
     "about": {
       "eyebrow": "About",
-      "title": "Backend engineering for systems that have to work.",
-      "p1": "Developer and Software Engineering student, focused on APIs, integrations, authentication, and access control.",
+      "title": "Software that works, from the screen to the server.",
+      "p1": "Developer and Software Engineering student. I take care of everything that makes a system work: the screens, the server, the database, login and connections to other systems.",
       "p2": "Before code, four years in technical support. Today I work on institutional systems in production and on my own projects, with tests and documented decisions.",
       "factsTitle": "At a glance",
       "facts": [
@@ -823,6 +840,15 @@
       "indexLabel": "Chapters",
       "chapterLabel": "Chapter",
       "milestoneLabel": "Milestone",
+      "timelineTitle": "From technical support to live systems, in five steps.",
+      "timelineCta": "See the full journey",
+      "timeline": [
+        { "year": "2019", "title": "Technical support", "blurb": "I learned to solve real problems for people and networks." },
+        { "year": "2023", "title": "Turn to software", "blurb": "I started the Software Engineering degree and my first job as a developer." },
+        { "year": "2024", "title": "Institutional systems", "blurb": "Internal systems at the Brazilian Air Force and an internship at UniEVANGÉLICA." },
+        { "year": "2025", "title": "System in production", "blurb": "I began evolving James Fanstone, a platform used every day." },
+        { "year": "2026", "title": "Authorship", "blurb": "I rewrote James Fanstone and built the E-Sports Portal and the Maximiza site." }
+      ],
       "chapters": [
         { "id": "base", "period": "2019–2022", "year": "2019", "title": "The foundation", "text": "Four years of technical support at Tecpress Tecnologia: user support, incident diagnosis, networks, infrastructure, and training.", "milestone": "Troubleshooting and log analysis as my first engineering school." },
         { "id": "virada", "period": "2023", "year": "2023", "title": "The turn to software", "text": "After a stint in purchasing at Leomed Drogarias, I started Software Engineering at UniEVANGÉLICA in August and joined Fábrica de Tecnologias Turing as a developer in September.", "milestone": "First development role." },
@@ -850,7 +876,13 @@
       "privacy": "Privacy",
       "terms": "Terms",
       "cookies": "Cookies",
-      "top": "Back to top"
+      "tagline": "Software developer in Anápolis, Brazil. Screens, servers and databases, end to end.",
+      "navTitle": "Navigate",
+      "liveTitle": "Live projects",
+      "contactTitle": "Contact",
+      "legalTitle": "Documents",
+      "cta": "Shall we talk? Write to me",
+      "madeWith": "Site built by me with React, TypeScript and Vite."
     }
   }
 }

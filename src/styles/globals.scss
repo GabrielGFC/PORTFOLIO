@@ -21,7 +21,7 @@ body {
   font-weight: 400;
   line-height: 1.65;
   color: var(--color-text-main);
-  background: var(--color-bg);
+  /* Sem background aqui: o fundo vem do <html>, para o canvas interativo (z-index -1) ficar visível */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;

@@ -689,20 +689,22 @@
     "nav": {
       "label": "Navegação principal",
       "home": "Início",
-      "work": "Trabalho",
+      "work": "Projetos",
       "journey": "Trajetória",
       "about": "Sobre",
       "contact": "Contato",
+      "cta": "Fale comigo",
       "resume": "Currículo",
       "menu": "Abrir menu",
       "close": "Fechar menu",
       "language": "Mudar para inglês"
     },
     "hero": {
-      "eyebrow": "Engenharia de software · Backend · APIs",
+      "eyebrow": "Desenvolvedor de software · Back-end e front-end",
       "line1": "Gabriel Fernandes",
       "line2": "de Carvalho",
-      "statement": "Desenvolvo sistemas, APIs e soluções de software com foco em arquitetura, qualidade e impacto real.",
+      "statement": "Resolvo problemas com software. Construo a parte que as pessoas usam (as telas de um site ou sistema) e a parte que fica por trás (servidores, bancos de dados e integrações). Já coloquei no ar sistemas para uma universidade e para empresas.",
+      "playHint": "Dica: mexa o mouse ou toque na tela. O fundo reage.",
       "primary": "Explorar projetos",
       "secondary": "Entrar em contato",
       "markLabel": "Monograma GFC",
@@ -710,10 +712,10 @@
       "location": "Anápolis, GO · remoto",
       "numbersLabel": "Em números",
       "numbers": [
-        { "value": "482", "label": "testes automatizados na reescrita do backend em Java" },
-        { "value": "31", "label": "controllers no mesmo sistema" },
-        { "value": "26", "label": "migrações de banco versionadas" },
-        { "value": "3+", "label": "anos em sistemas institucionais da UniEVANGÉLICA" }
+        { "value": "6", "label": "sites e sistemas no ar, abertos para você visitar" },
+        { "value": "3+", "label": "anos criando sistemas para a UniEVANGÉLICA" },
+        { "value": "482", "label": "testes automáticos no sistema que reescrevi em Java" },
+        { "value": "2", "label": "frentes: o que se vê (front-end) e o que fica por trás (back-end)" }
       ],
       "scroll": "Role para continuar",
       "credentialsLabel": "Credenciais",
@@ -735,8 +737,35 @@
       "home": "Voltar ao início"
     },
     "work": {
-      "eyebrow": "Trabalho selecionado",
-      "title": "Quatro projetos que mostram como eu trabalho.",
+      "eyebrow": "Projetos",
+      "title": "Projetos no ar. Clique e veja funcionando.",
+      "liveIntro": "Sistemas reais, usados por pessoas de verdade. Cada cartão leva ao site publicado.",
+      "openSite": "Abrir o site",
+      "details": "Ver detalhes",
+      "whatIs": "O que é",
+      "myPart": "O que eu fiz",
+      "techTitle": "Tecnologias usadas",
+      "techHint": "Etiquetas com os nomes das ferramentas, para quem for da área técnica.",
+      "techLabels": {
+        "front": "Telas (front-end)",
+        "back": "Por trás (back-end)",
+        "db": "Banco de dados",
+        "infra": "Publicação e automação",
+        "before": "Sistema antigo (antes da reescrita)"
+      },
+      "othersLabel": "Outros projetos, ainda sem site público",
+      "live": [
+        { "key": "esports", "name": "Portal E-Sports UniEVANGÉLICA", "meta": "UniEVANGÉLICA · 5ª edição · 2026", "plain": "Site oficial do campeonato de e-sports da universidade: os alunos se inscrevem por modalidade e as edições anteriores ficam guardadas para consulta.", "role": "Desenvolvi, junto com outro desenvolvedor, as telas e a parte que roda no servidor, incluindo correções de segurança." },
+        { "key": "lionFanstone", "name": "James Fanstone", "meta": "UniEVANGÉLICA · Em produção", "plain": "Plataforma de pesquisa acadêmica da universidade, usada no dia a dia pela equipe. Reescrevi a parte de trás do sistema em tecnologias mais modernas, sem parar o uso.", "role": "Autor de todos os 83 registros de código (commits) da reescrita. Antes, já contribuía no sistema antigo, em equipe." },
+        { "key": "maximiza", "name": "Maximiza Seguros", "meta": "Cliente · 2026", "plain": "Site de uma corretora de seguros: o cliente pede cotação online em formulários passo a passo e encontra imobiliárias parceiras.", "role": "Desenvolvi o site inteiro, com testes automáticos e atualização diária da lista de parceiros." },
+        { "key": "coneleste", "name": "Cone Leste Seguros", "meta": "Cliente · Colaboração", "plain": "Página de campanha que anuncia a união de duas corretoras de seguros e leva o visitante ao site principal.", "role": "Colaborei na finalização, em equipe: ícone do site, descrição e link externo." },
+        { "key": "farmxp", "name": "Farm Automático de XP Dev", "meta": "Projeto pessoal", "plain": "Meu currículo em forma de jogo: missões, tecnologias e contato, com visual de jogo antigo (pixel art).", "role": "Idealizei, desenhei e publiquei sozinho." },
+        { "key": "jac", "name": "JAC — Jornada Acadêmica e Comunitária", "meta": "Projeto pessoal · em evolução", "plain": "Plataforma para eventos acadêmicos: programação, inscrição e registro de presença por QR Code. Versão publicada, ainda em evolução.", "role": "Desenvolvi partes do servidor e das telas: presença por QR Code, pontos e correções de segurança." }
+      ],
+      "others": [
+        { "key": "aila", "name": "Aila", "meta": "Plataforma editorial · 2026", "plain": "Ajuda uma revista científica a escolher quem avalia cada artigo, com inteligência artificial local e justificativa para cada indicação." },
+        { "key": "pasteur", "name": "Pasteur", "meta": "Projeto público · GitHub", "plain": "Servidor de uma aplicação de saúde, com prescrições e fluxos de atendimento." }
+      ],
       "caseStudy": "Ver estudo de caso",
       "archiveOpen": "Ver todos os projetos",
       "archiveClose": "Recolher projetos",
@@ -746,8 +775,6 @@
       "repositoryCount": "Explore os repositórios públicos",
       "repositoryCountNote": "Projetos, estudos e colaborações",
       "githubProfile": "Ver perfil",
-      "featuredLabel": "Em destaque",
-      "moreLabel": "Também no portfólio",
       "diagrams": {
         "scrollable": "diagrama, role na horizontal",
         "lion": {
@@ -770,18 +797,8 @@
           "humanSub": "Equipe editorial"
         }
       },
-      "items": [
-        { "key": "lionFanstone", "name": "James Fanstone — reescrita em Java", "summary": "Reescrita do backend de uma plataforma institucional de pesquisa, de Laravel para Java e Spring Boot.", "meta": "UniEVANGÉLICA · Em produção · 2026" },
-        { "key": "jac", "name": "JAC — Jornada Acadêmica e Comunitária", "summary": "Plataforma de eventos acadêmicos com catálogo, inscrições e check-in atual por QR Code.", "meta": "Projeto pessoal · em evolução" },
-        { "key": "aila", "name": "Aila", "summary": "Apoio à escolha de pareceristas, com IA local e ranking explicável.", "meta": "Plataforma editorial · 2026" },
-        { "key": "maximiza", "name": "Maximiza Seguros", "summary": "Site institucional de corretora, com formulários de cotação e diretório de parceiros.", "meta": "Cliente · Em produção · 2026" }
-      ],
       "archive": [
-        { "key": "esports", "meta": "UniEVANGÉLICA · 2026" },
-        { "key": "fanstoneLegacy", "meta": "UniEVANGÉLICA · Em produção · 2025–2026" },
-        { "key": "coneleste", "meta": "Cliente · Colaboração · 2026" },
-        { "key": "pasteur", "meta": "Projeto público" },
-        { "key": "farmxp", "meta": "Produto pessoal" }
+        { "key": "fanstoneLegacy", "meta": "UniEVANGÉLICA · Em produção · 2025–2026" }
       ]
     },
     "experience": {
@@ -800,8 +817,8 @@
     },
     "about": {
       "eyebrow": "Sobre",
-      "title": "Engenharia de backend para sistemas que precisam funcionar.",
-      "p1": "Desenvolvedor e estudante de Engenharia de Software, com foco em APIs, integrações, autenticação e controle de acesso.",
+      "title": "Software que funciona, da tela ao servidor.",
+      "p1": "Desenvolvedor e estudante de Engenharia de Software. Cuido de tudo o que faz um sistema funcionar: as telas, o servidor, o banco de dados, o login e a conexão com outros sistemas.",
       "p2": "Antes do código, quatro anos de suporte técnico. Hoje atuo em sistemas institucionais em produção e em projetos próprios, com testes e decisões documentadas.",
       "factsTitle": "Em síntese",
       "facts": [
@@ -823,6 +840,15 @@
       "indexLabel": "Capítulos",
       "chapterLabel": "Capítulo",
       "milestoneLabel": "Marco",
+      "timelineTitle": "Da assistência técnica aos sistemas no ar, em cinco passos.",
+      "timelineCta": "Ver a trajetória completa",
+      "timeline": [
+        { "year": "2019", "title": "Suporte técnico", "blurb": "Aprendi a resolver problemas reais de pessoas e redes." },
+        { "year": "2023", "title": "Virada para o software", "blurb": "Comecei a faculdade de Engenharia de Software e meu primeiro emprego como desenvolvedor." },
+        { "year": "2024", "title": "Sistemas institucionais", "blurb": "Sistemas internos na Força Aérea Brasileira e estágio na UniEVANGÉLICA." },
+        { "year": "2025", "title": "Sistema em produção", "blurb": "Passei a evoluir o James Fanstone, plataforma usada todos os dias." },
+        { "year": "2026", "title": "Autoria", "blurb": "Reescrevi o James Fanstone, construí o Portal E-Sports e o site da Maximiza." }
+      ],
       "chapters": [
         { "id": "base", "period": "2019–2022", "year": "2019", "title": "A base", "text": "Quatro anos de suporte técnico na Tecpress Tecnologia: atendimento a usuários, diagnóstico de incidentes, redes, infraestrutura e treinamento.", "milestone": "Troubleshooting e análise de logs como primeira escola de engenharia." },
         { "id": "virada", "period": "2023", "year": "2023", "title": "A virada para o software", "text": "Depois de um período em compras na Leomed Drogarias, comecei Engenharia de Software na UniEVANGÉLICA em agosto e entrei na Fábrica de Tecnologias Turing como desenvolvedor em setembro.", "milestone": "Primeiro cargo de desenvolvimento." },
@@ -850,7 +876,13 @@
       "privacy": "Privacidade",
       "terms": "Termos",
       "cookies": "Cookies",
-      "top": "Voltar ao topo"
+      "tagline": "Desenvolvedor de software em Anápolis, GO. Telas, servidores e bancos de dados, do começo ao fim.",
+      "navTitle": "Navegar",
+      "liveTitle": "Projetos no ar",
+      "contactTitle": "Contato",
+      "legalTitle": "Documentos",
+      "cta": "Vamos conversar? Escreva para mim",
+      "madeWith": "Site feito por mim com React, TypeScript e Vite."
     }
   }
 }

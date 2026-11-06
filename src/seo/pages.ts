@@ -18,7 +18,7 @@ export type SeoPage = {
 };
 
 const HOME_DESCRIPTION =
-  "Desenvolvedor backend e full stack (Laravel, Node.js/TypeScript, Java/Spring Boot, PostgreSQL) em sistemas institucionais da UniEVANGÉLICA. Projetos, experiência e currículo.";
+  "Desenvolvedor de software que resolve problemas no back-end e no front-end. Veja os sistemas que coloquei no ar para uma universidade e para empresas, com as tecnologias de cada um.";
 
 const projectPages: SeoPage[] = featuredProjects.map((project) => ({
   path: `/projetos/${project.id}`,
@@ -48,7 +48,7 @@ export const seoPages: SeoPage[] = [
   {
     path: "/privacidade",
     title: `Política de Privacidade | ${SITE_NAME}`,
-    description: "Como este site trata dados pessoais, conforme a LGPD.",
+    description: "O que este site coleta (quase nada), como falar comigo e como pedir a exclusão de dados, com base na LGPD.",
     image: DEFAULT_IMAGE,
     indexable: true,
   },
@@ -62,7 +62,7 @@ export const seoPages: SeoPage[] = [
   {
     path: "/cookies",
     title: `Política de Cookies | ${SITE_NAME}`,
-    description: "Quais cookies e armazenamentos locais este site usa e como gerenciá-los.",
+    description: "Este site não grava cookies. Veja o único item temporário que ele guarda no navegador.",
     image: DEFAULT_IMAGE,
     indexable: true,
   },

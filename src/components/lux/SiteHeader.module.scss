@@ -52,12 +52,19 @@
   letter-spacing: 0.06em;
 }
 
+/* Desktop: links numa pílula translúcida; o link da seção atual vira uma pílula preenchida */
 .nav {
   ul {
     display: flex;
     align-items: center;
-    gap: clamp(20px, 3vw, 40px);
+    gap: 4px;
+    padding: 5px;
     list-style: none;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border-subtle);
+    background: rgba(var(--sunfall-night-rgb), 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   @media (max-width: 899px) {
@@ -66,16 +73,25 @@
     display: none;
     padding: 40px var(--gutter);
     background: var(--sunfall-night);
+    overflow-y: auto;
 
     ul {
       flex-direction: column;
-      align-items: flex-start;
-      gap: 28px;
+      align-items: stretch;
+      gap: 4px;
+      padding: 0;
+      border: 0;
+      background: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
 
     .link {
-      font-size: 32px;
-      font-weight: 500;
+      width: 100%;
+      padding: 16px 12px;
+      border-radius: var(--radius-md);
+      font-size: 28px;
+      font-weight: 600;
       letter-spacing: -0.02em;
       color: var(--sunfall-ivory);
     }
@@ -93,7 +109,9 @@
   display: inline-flex;
   align-items: center;
   line-height: 1.2;
-  padding: 6px 0;
+  min-height: 40px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
   background: none;
   border: 0;
   cursor: pointer;
@@ -102,29 +120,40 @@
   letter-spacing: 0.01em;
   color: var(--color-text-muted);
   text-decoration: none;
-  transition: color var(--dur-fast) var(--ease-lux);
+  transition: color var(--dur-fast) var(--ease-lux), background var(--dur-fast) var(--ease-lux);
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    background: var(--sunfall-slate);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform var(--dur-base) var(--ease-lux);
+  &:hover {
+    color: var(--sunfall-ivory);
+    background: rgba(var(--sunfall-ivory-rgb), 0.06);
   }
 
-  &:hover,
   &.active {
-    color: var(--sunfall-ivory);
+    color: var(--sunfall-void);
+    background: var(--sunfall-fire);
+  }
+}
 
-    &::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
+/* Chamada principal: contato sempre à mão no desktop (no celular já existe dentro do menu) */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--sunfall-void);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background var(--dur-fast) var(--ease-lux);
+
+  &:hover {
+    background: var(--sunfall-slate);
+  }
+
+  @media (max-width: 899px) {
+    display: none;
   }
 }
 

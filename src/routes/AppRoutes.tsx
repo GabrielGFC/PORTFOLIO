@@ -1,6 +1,7 @@
 import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import InteractiveBackground from '../components/lux/InteractiveBackground';
 import Portfolio from '../pages/portfolio';
 import Trajetoria from '../pages/trajetoria';
 import ProjectPage from '../pages/projeto';
@@ -13,17 +14,20 @@ import NaoEncontrado from '../pages/naoEncontrado';
 const AppRoutes: React.FC = () => {
   const location = useLocation();
   return (
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Portfolio />} />
-        <Route path="/trajetoria" element={<Trajetoria />} />
-        <Route path="/projetos/:id" element={<ProjectPage />} />
-        <Route path="/privacidade" element={<Privacidade />} />
-        <Route path="/termos" element={<Termos />} />
-        <Route path="/cookies" element={<Cookies />} />
-        <Route path="*" element={<NaoEncontrado />} />
-      </Routes>
-    </AnimatePresence>
+    <>
+      <InteractiveBackground />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Portfolio />} />
+          <Route path="/trajetoria" element={<Trajetoria />} />
+          <Route path="/projetos/:id" element={<ProjectPage />} />
+          <Route path="/privacidade" element={<Privacidade />} />
+          <Route path="/termos" element={<Termos />} />
+          <Route path="/cookies" element={<Cookies />} />
+          <Route path="*" element={<NaoEncontrado />} />
+        </Routes>
+      </AnimatePresence>
+    </>
   );
 };
 

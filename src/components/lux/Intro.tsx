@@ -42,6 +42,12 @@ const Intro: React.FC = () => {
             <span aria-hidden="true">↗</span>
           </button>
         </motion.div>
+
+        {!reduce && (
+          <motion.p className={styles.hint} {...fadeIn(0.6)}>
+            {t.playHint}
+          </motion.p>
+        )}
       </div>
 
       <p className={styles.place}>{t.location}</p>

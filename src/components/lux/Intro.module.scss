@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   min-height: 100svh;
-  padding: 120px 0 calc(88px + var(--consent-h, 0px));
+  padding: 120px 0 88px;
   overflow: hidden;
   isolation: isolate;
 }
@@ -79,8 +79,15 @@
   }
 }
 
+.hint {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  color: var(--color-text-muted);
+}
+
 .statement {
-  max-width: 36ch;
+  max-width: 52ch;
   font-size: var(--fs-lead);
   font-weight: 300;
   line-height: 1.7;
@@ -142,7 +149,7 @@
 .place {
   position: absolute;
   left: max(var(--gutter), calc((100% - var(--container)) / 2));
-  bottom: calc(28px + var(--consent-h, 0px));
+  bottom: 28px;
   font-family: var(--ff-mono);
   font-size: var(--fs-mono);
   letter-spacing: var(--tracking-eyebrow);

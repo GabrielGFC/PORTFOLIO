@@ -40,19 +40,7 @@
 }
 
 .stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
-
-  li {
-    padding: 4px 12px;
-    border-radius: var(--radius-full);
-    border: 1px solid var(--color-border-medium);
-    font-family: var(--ff-mono);
-    font-size: var(--fs-mono);
-    color: var(--sunfall-slate);
-  }
+  max-width: 720px;
 }
 
 /* Botão de produção, só nos sistemas que estão no ar */

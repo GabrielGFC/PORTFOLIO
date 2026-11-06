@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import styles from "./PrivacyConsent.module.scss";
 
 const STORAGE_KEY = "gfc-privacy-consent";
-const POLICY_VERSION = "2026-06-03";
+const POLICY_VERSION = "2026-11-06";
 
 type ConsentStatus = "accepted" | "rejected" | null;
 type ConsentRecord = {
@@ -96,7 +97,7 @@ const PrivacyConsent: React.FC = () => {
             role="dialog"
             aria-modal="false"
             aria-live="polite"
-            aria-label="Aviso de privacidade conforme LGPD"
+            aria-label="Aviso de privacidade"
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 80, opacity: 0 }}
@@ -106,9 +107,9 @@ const PrivacyConsent: React.FC = () => {
               <div className={styles.text}>
                 <h3 className={styles.heading}>Sua privacidade importa</h3>
                 <p className={styles.message}>
-                  Usamos cookies necessários para o site funcionar. Com seu
-                  consentimento, também usamos cookies para entender como o
-                  site é usado e melhorá-lo.{" "}
+                  Este site não usa cookies nem ferramentas de análise de
+                  visitas. Ele guarda só um item temporário no navegador, para
+                  não repetir uma animação.{" "}
                   <button
                     type="button"
                     className={styles.inlineLink}
@@ -122,19 +123,14 @@ const PrivacyConsent: React.FC = () => {
                 {expanded ? (
                   <div className={styles.details}>
                     <p>
-                      <strong>Base legal:</strong> consentimento (art. 7º, I da
-                      Lei nº 13.709/2018 — LGPD).
+                      <strong>O que é guardado:</strong> um item temporário
+                      (<code>gfc-mark-played</code>, em sessionStorage) que
+                      some ao fechar a aba. Não identifica você.
                     </p>
                     <p>
-                      <strong>Cookies necessários:</strong> indispensáveis pro
-                      site carregar e lembrar a sua escolha de tema
-                      (claro/escuro) e de consentimento. Não rastreiam você.
-                    </p>
-                    <p>
-                      <strong>Cookies analíticos (opcional):</strong> coletam
-                      dados anônimos e agregados de navegação pra eu entender
-                      quais seções funcionam. Só são ativados se você clicar em
-                      <em> Aceitar</em>.
+                      <strong>O que não existe aqui:</strong> cookies,
+                      análise de visitas, anúncios e formulários. O único
+                      contato é por e-mail, se você escrever para mim.
                     </p>
                     <p>
                       <strong>Seus direitos:</strong> você pode acessar,
@@ -156,19 +152,15 @@ const PrivacyConsent: React.FC = () => {
                 ) : null}
               </div>
               <div className={styles.actions}>
-                <button
-                  type="button"
-                  className={styles.secondary}
-                  onClick={() => decide("rejected")}
-                >
-                  Recusar
-                </button>
+                <Link className={styles.secondary} to="/privacidade">
+                  Política completa
+                </Link>
                 <button
                   type="button"
                   className={styles.primary}
                   onClick={() => decide("accepted")}
                 >
-                  Aceitar
+                  Entendi
                 </button>
               </div>
             </div>

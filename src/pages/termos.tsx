@@ -1,14 +1,20 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import SiteFooter from "../components/lux/SiteFooter";
+import SiteHeader from "../components/lux/SiteHeader";
+import { PageTransition } from "../motion/motion";
 import styles from "./legal.module.scss";
 
 const Termos: React.FC = () => {
   useEffect(() => {
     document.title = "Termos de Uso | Gabriel Fernandes de Carvalho";
+    window.scrollTo(0, 0);
   }, []);
 
   return (
-    <main className={styles.page} lang="pt-BR">
+    <PageTransition>
+    <SiteHeader />
+    <main id="conteudo" tabIndex={-1} className={styles.page} lang="pt-BR">
       <div className={styles.wrap}>
         <Link to="/" className={styles.back}>
           ← Voltar ao portfólio
@@ -123,6 +129,8 @@ const Termos: React.FC = () => {
         </nav>
       </div>
     </main>
+    <SiteFooter />
+    </PageTransition>
   );
 };
 

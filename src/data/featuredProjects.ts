@@ -25,8 +25,16 @@ export type FeaturedText = {
   };
 };
 
+/** Grupos de tecnologia: nomes próprios não se traduzem; só o rótulo do grupo vem do JSON (lux.work.techLabels). */
+export type TechGroup = {
+  group: "back" | "front" | "db" | "infra" | "before";
+  items: string[];
+};
+
 export type FeaturedProject = {
   id: string;
+  /** Tecnologias comprovadas nos repositórios (package.json, build.gradle, docker-compose), agrupadas por camada. */
+  tech?: TechGroup[];
   /** Key matching src/mocks/{portuguese,english}.json → featured.<i18nKey>, used to render localized text. */
   i18nKey:
     | "aila"
@@ -100,6 +108,10 @@ export const featuredProjects: FeaturedProject[] = [
     impact:
       "Site institucional em produção, com formulários multietapas de cotação, diretório de imobiliárias parceiras sincronizado diariamente e conteúdo corporativo.",
     stack: ["Vue 3", "TypeScript", "Tailwind 4", "Cloudflare", "GitHub Actions"],
+    tech: [
+      { group: "front", items: ["HTML", "CSS", "TypeScript", "Vue 3", "Vue Router", "Tailwind CSS 4", "Vite", "Vitest"] },
+      { group: "infra", items: ["Cloudflare", "GitHub Actions"] },
+    ],
     roleShort:
       "Desenvolvi o site em Vue 3, TypeScript e Tailwind 4. O histórico da branch principal tem 215 commits humanos meus e 27 commits automáticos de sincronização.",
     resultsPreview: [
@@ -110,7 +122,7 @@ export const featuredProjects: FeaturedProject[] = [
     live: true,
     thumbnailKey: "maximiza",
     caseStudy: {
-      referenceLink: "https://maximiza-seguros.gabriel-fernandes-f48.workers.dev/",
+      referenceLink: "https://www.maximizaseguros.com.br/",
     },
   },
   {
@@ -124,6 +136,7 @@ export const featuredProjects: FeaturedProject[] = [
     impact:
       "Backend de aplicação clínica com rotinas de prescrição e fluxos de atendimento, demonstrando modelagem de domínio e organização de APIs para sistemas de saúde.",
     stack: ["Node.js", "JavaScript"],
+    tech: [{ group: "back", items: ["Node.js", "JavaScript"] }],
     roleShort:
       "Modelei o domínio e organizei as APIs REST do backend, cobrindo rotinas de prescrição e fluxos de atendimento.",
     resultsPreview: [
@@ -147,6 +160,11 @@ export const featuredProjects: FeaturedProject[] = [
     impact:
       "Sistema de inscrição por modalidade e gestão do torneio com edições separadas: a 5ª edição na home e a 4ª preservada em rota histórica.",
     stack: ["NestJS", "Nuxt 4", "TypeScript", "PostgreSQL"],
+    tech: [
+      { group: "front", items: ["HTML", "CSS", "TypeScript", "Nuxt 4", "Vue 3", "Nuxt UI", "Tailwind CSS 4"] },
+      { group: "back", items: ["Node.js", "TypeScript", "NestJS 11", "Sequelize"] },
+      { group: "db", items: ["PostgreSQL"] },
+    ],
     roleShort:
       "Desenvolvi, com outro desenvolvedor, o backend (NestJS, Sequelize, PostgreSQL) e o frontend (Nuxt 4): inscrição por modalidade, edições e segurança da API.",
     resultsPreview: [
@@ -171,6 +189,11 @@ export const featuredProjects: FeaturedProject[] = [
     impact:
       "Plataforma para explorar programação, inscrição e presença em eventos acadêmicos, com check-in por QR code, áreas por perfil e trilha de segurança documentada. A interface Vue está em transição e não é apresentada como produção.",
     stack: ["Node.js", "Express", "Prisma", "PostgreSQL", "Vue 3", "TypeScript"],
+    tech: [
+      { group: "front", items: ["HTML", "CSS", "TypeScript", "Vue 3", "Pinia", "Nuxt UI", "Tailwind CSS 4", "Vite"] },
+      { group: "back", items: ["Node.js", "TypeScript", "Express 5", "Prisma", "Zod"] },
+      { group: "db", items: ["PostgreSQL"] },
+    ],
     roleShort:
       "Implementei partes do backend e do frontend, os fluxos de presença e pontos, proteção CSRF e correções específicas de uma auditoria de segurança.",
     resultsPreview: [
@@ -178,8 +201,10 @@ export const featuredProjects: FeaturedProject[] = [
     ],
     owner: true,
     hasRealMedia: true,
+    live: true,
     thumbnailKey: "jac",
-    caseStudy: {},
+    // Endereço publicado e acessível; o status de produção/cutover segue em avaliação (ver registro do projeto).
+    caseStudy: { referenceLink: "https://jac-front-end.gabriel-fernandes-f48.workers.dev/" },
   },
   {
     id: "lion-fanstone",
@@ -187,11 +212,18 @@ export const featuredProjects: FeaturedProject[] = [
     title: "Reescrita do Sistema James Fanstone",
     badge: "Institucional / Em Produção",
     badgeType: "Institucional/Privado",
+    live: true,
     problem:
       "Um sistema institucional de pesquisa acadêmica em Laravel precisava evoluir para uma base mais sustentável, migrando o domínio de pesquisa para uma nova arquitetura sem interromper o sistema em produção.",
     impact:
       "Reescrita do backend de uma plataforma institucional de pesquisa acadêmica, migrando do sistema legado em Laravel para Java e Spring Boot, hoje em produção.",
     stack: ["Java 21", "Spring Boot 4", "PostgreSQL", "Flyway"],
+    tech: [
+      { group: "back", items: ["Java 21", "Spring Boot 4", "Spring Security", "Spring Data JPA", "SOAP (CNPq/Lattes)"] },
+      { group: "db", items: ["PostgreSQL", "Flyway"] },
+      { group: "front", items: ["HTML", "CSS", "TypeScript", "Vue 3", "Pinia", "Tailwind CSS 4"] },
+      { group: "before", items: ["PHP", "Laravel 11", "MySQL", "React", "TypeScript", "MUI"] },
+    ],
     roleShort:
       "Desenvolvi (83 de 83 commits) o backend em Java 21 e Spring Boot 4: arquitetura, domínio, migrações Flyway, integração SOAP com o CNPq/Lattes e decisões registradas em ADRs.",
     resultsPreview: [
@@ -200,7 +232,8 @@ export const featuredProjects: FeaturedProject[] = [
     owner: true,
     hasRealMedia: true,
     thumbnailKey: "lion",
-    caseStudy: {},
+    // Não há URL separada para a reescrita: o endereço público é o da plataforma James Fanstone.
+    caseStudy: { referenceLink: "https://plataformajf.unievangelica.edu.br/" },
   },
   {
     id: "coneleste",
@@ -213,6 +246,10 @@ export const featuredProjects: FeaturedProject[] = [
     impact:
       "Landing de campanha anunciando a parceria entre Coneleste e Maximiza Seguros, com pipeline de deploy automatizado via GitHub Actions para AWS S3/CloudFront.",
     stack: ["Vue.js", "TypeScript", "AWS S3", "CloudFront", "GitHub Actions"],
+    tech: [
+      { group: "front", items: ["HTML", "CSS", "TypeScript", "Vue 3", "Tailwind CSS 4", "Vite"] },
+      { group: "infra", items: ["AWS S3", "CloudFront", "GitHub Actions"] },
+    ],
     roleShort:
       "Colaborei na finalização da landing (favicon, descrição e link externo) desenvolvida majoritariamente por outro desenvolvedor, dentro de um repositório compartilhado.",
     resultsPreview: [
@@ -236,6 +273,10 @@ export const featuredProjects: FeaturedProject[] = [
     impact:
       "Portal gamificado com identidade visual pixel/dark que apresenta minha trajetória dev: missões, stack, perfil e contato em um fluxo de progressão.",
     stack: ["Cloudflare Workers", "TypeScript"],
+    tech: [
+      { group: "front", items: ["TypeScript"] },
+      { group: "infra", items: ["Cloudflare Workers"] },
+    ],
     roleShort:
       "Concebi, desenhei e publiquei o produto — da identidade visual pixel-art à infraestrutura edge.",
     resultsPreview: [
@@ -259,6 +300,11 @@ export const featuredProjects: FeaturedProject[] = [
     impact:
       "Contribuí com o relatório de matrículas (com filtro por edital e data), lembretes de avaliação por e-mail, busca avançada e validação de equipe externa em uma plataforma de pesquisa acadêmica da UniEVANGÉLICA em produção, mantida por uma equipe.",
     stack: ["Laravel 11", "React", "MUI"],
+    tech: [
+      { group: "back", items: ["PHP", "Laravel 11"] },
+      { group: "db", items: ["MySQL"] },
+      { group: "front", items: ["HTML", "CSS", "TypeScript", "React", "MUI", "Tailwind CSS"] },
+    ],
     roleShort:
       "118 dos 764 commits do backend e 105 dos 894 do frontend: contribuição em equipe, não sou autor principal do sistema.",
     resultsPreview: [

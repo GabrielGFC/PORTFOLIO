@@ -5,11 +5,11 @@ import SiteHeader from "../../components/lux/SiteHeader";
 import Intro from "../../components/lux/Intro";
 import Numbers from "../../components/lux/Numbers";
 import SelectedWork from "../../components/lux/SelectedWork";
-import ExperienceList from "../../components/lux/ExperienceList";
+import Timeline from "../../components/lux/Timeline";
 import About from "../../components/lux/About";
 import Closing from "../../components/lux/Closing";
-import SiteFooter from "../../components/lux/SiteFooter";
 import PrivacyConsent from "../../components/PrivacyConsent";
+import SiteFooter from "../../components/lux/SiteFooter";
 import { PageTransition, scrollToSection } from "../../motion/motion";
 
 const Portfolio: React.FC = () => {
@@ -37,7 +37,7 @@ const Portfolio: React.FC = () => {
         <Intro />
         <Numbers />
         <SelectedWork />
-        <ExperienceList />
+        <Timeline />
         <About />
         <Closing />
       </main>

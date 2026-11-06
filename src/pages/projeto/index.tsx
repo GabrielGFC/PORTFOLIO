@@ -6,11 +6,12 @@ import SiteHeader from "../../components/lux/SiteHeader";
 import SiteFooter from "../../components/lux/SiteFooter";
 import { featuredProjects, type FeaturedText } from "../../data/featuredProjects";
 import ProjectVisual from "../../components/lux/ProjectVisual";
+import TechTags from "../../components/lux/TechTags";
 import { MaskedTitle, PageTransition, Reveal, duration, ease } from "../../motion/motion";
 import styles from "./projeto.module.scss";
 
-/** Ordem de leitura: os quatro selecionados primeiro, depois o arquivo. */
-const order = ["lion-fanstone", "jac", "aila", "maximiza", "esports", "fanstone-legacy", "coneleste", "pasteur", "farm-xp"];
+/** Ordem de leitura: os projetos no ar primeiro (mesma ordem da home), depois os demais. */
+const order = ["esports", "lion-fanstone", "maximiza", "coneleste", "farm-xp", "jac", "aila", "pasteur", "fanstone-legacy"];
 
 const ProjectPage: React.FC = () => {
   const { id } = useParams();
@@ -67,17 +68,14 @@ const ProjectPage: React.FC = () => {
             >
               {text.impact}
             </motion.p>
-            <motion.ul
+            <motion.div
               className={styles.stack}
-              aria-label={t.stack}
               initial={reduce ? false : { opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: duration.slow, ease, delay: 0.7 }}
             >
-              {project.stack.map((tech) => (
-                <li key={tech}>{tech}</li>
-              ))}
-            </motion.ul>
+              <TechTags project={project} />
+            </motion.div>
             {project.live && project.caseStudy.referenceLink && (
               <a className={styles.live} href={project.caseStudy.referenceLink} target="_blank" rel="noopener noreferrer">
                 {t.live} <span aria-hidden="true">↗</span>

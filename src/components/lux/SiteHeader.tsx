@@ -37,7 +37,7 @@ const SiteHeader: React.FC = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) setSection(entry.target.id === "experience" ? "work" : entry.target.id);
+          if (entry.isIntersecting) setSection(entry.target.id === "experience" ? null : entry.target.id);
         });
       },
       { rootMargin: "-45% 0px -50% 0px" },
@@ -136,6 +136,9 @@ const SiteHeader: React.FC = () => {
               <span className={langKey === "pt" ? styles.langOn : ""}>PT</span>
               <span aria-hidden="true" className={styles.langSep}>/</span>
               <span className={langKey === "en" ? styles.langOn : ""}>EN</span>
+            </button>
+            <button type="button" className={styles.cta} onClick={() => goTo("contact")}>
+              {t.cta}
             </button>
             <button
               type="button"
