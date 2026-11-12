@@ -122,7 +122,7 @@ export const featuredProjects: FeaturedProject[] = [
     live: true,
     thumbnailKey: "maximiza",
     caseStudy: {
-      referenceLink: "https://www.maximizaseguros.com.br/",
+      referenceLink: "https://www.maximizaseguros.com.br/sitenew/",
     },
   },
   {

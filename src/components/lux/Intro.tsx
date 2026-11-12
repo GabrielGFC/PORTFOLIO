@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import React, { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import { duration, ease, scrollToSection } from "../../motion/motion";
+import { duration, ease, RESUME_URL, scrollToSection } from "../../motion/motion";
 import Monogram from "./Monogram";
 import styles from "./Intro.module.scss";
 
@@ -28,26 +28,24 @@ const Intro: React.FC = () => {
           <span>{t.line1}</span> <em>{t.line2}</em>
         </motion.h1>
 
+        <motion.p className={styles.role} {...fadeIn(0.22)}>
+          {t.eyebrow}
+        </motion.p>
+
         <motion.p className={styles.statement} {...fadeIn(0.3)}>
           {t.statement}
         </motion.p>
 
-        <motion.div className={styles.actions} {...fadeIn(0.45)}>
+        <motion.div className={styles.actions} {...fadeIn(0.35)}>
           <button type="button" className={styles.primary} onClick={() => scrollToSection("work", reduce)}>
             {t.primary}
             <span aria-hidden="true">→</span>
           </button>
-          <button type="button" className={styles.ghost} onClick={() => scrollToSection("contact", reduce)}>
+          <a className={styles.ghost} href={RESUME_URL} target="_blank" rel="noopener noreferrer">
             {t.secondary}
             <span aria-hidden="true">↗</span>
-          </button>
+          </a>
         </motion.div>
-
-        {!reduce && (
-          <motion.p className={styles.hint} {...fadeIn(0.6)}>
-            {t.playHint}
-          </motion.p>
-        )}
       </div>
 
       <p className={styles.place}>{t.location}</p>

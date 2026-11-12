@@ -46,7 +46,7 @@ const LiveCard: React.FC<{ item: LiveItem; delay: number }> = ({ item, delay }) 
                 <dd>{item.role}</dd>
               </div>
             </dl>
-            <TechTags project={project} />
+            <TechTags project={project} compact />
             <div className={styles.buttons}>
               <a className={styles.visit} href={url} target="_blank" rel="noopener noreferrer">
                 {t.openSite} <span aria-hidden="true">↗</span>

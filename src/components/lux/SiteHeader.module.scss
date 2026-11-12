@@ -141,15 +141,15 @@
   padding: 0 20px;
   border: 0;
   border-radius: var(--radius-full);
-  background: var(--sunfall-void);
-  color: #fff;
+  background: var(--sunfall-fire);
+  color: var(--sunfall-void);
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
   transition: background var(--dur-fast) var(--ease-lux);
 
   &:hover {
-    background: var(--sunfall-slate);
+    background: var(--sunfall-cream);
   }
 
   @media (max-width: 899px) {

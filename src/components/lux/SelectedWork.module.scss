@@ -50,9 +50,14 @@
 }
 
 .liveGrid {
-  @media (min-width: 900px) {
+  @media (min-width: 1100px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  @media (min-width: 760px) and (max-width: 1099px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px;
+    gap: 24px;
   }
 }
 
@@ -81,9 +86,11 @@
   transition: border-color var(--dur-base) var(--ease-lux), transform var(--dur-base) var(--ease-lux),
     box-shadow var(--dur-base) var(--ease-lux);
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     border-color: rgba(var(--sunfall-slate-rgb), 0.55);
-    box-shadow: 0 24px 56px rgba(16, 27, 36, 0.16);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.32);
+    transform: translateY(-3px);
 
     .shot img {
       transform: scale(1.03);
@@ -119,7 +126,7 @@
   gap: 8px;
   padding: 8px 14px;
   border-radius: var(--radius-full);
-  background: var(--sunfall-void);
+  background: var(--color-inverse-surface);
   color: #fff;
   font-size: 13px;
   font-weight: 600;
@@ -143,9 +150,9 @@
 
 .liveBody {
   display: grid;
-  gap: 16px;
+  gap: 10px;
   align-content: start;
-  padding: clamp(22px, 2.4vw, 32px);
+  padding: clamp(18px, 1.8vw, 24px);
 }
 
 .meta {
@@ -156,7 +163,7 @@
 }
 
 .name {
-  font-size: clamp(26px, 2.4vw, 34px);
+  font-size: clamp(22px, 1.9vw, 28px);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.1;
@@ -164,7 +171,7 @@
 
 .facts {
   display: grid;
-  gap: 12px;
+  gap: 8px;
 
   dt {
     font-size: 13px;
@@ -174,7 +181,7 @@
   }
 
   dd {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.55;
     color: var(--color-text-main);
   }

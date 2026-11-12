@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { LanguageContext } from "../contexts/LanguageContext";
 import styles from "./PrivacyConsent.module.scss";
 
 const STORAGE_KEY = "gfc-privacy-consent";
@@ -42,6 +43,8 @@ const writeConsent = (status: Exclude<ConsentStatus, null>) => {
 };
 
 const PrivacyConsent: React.FC = () => {
+  const { langKey } = useContext(LanguageContext);
+  const english = langKey === "en";
   const [visible, setVisible] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const barRef = useRef<HTMLDivElement>(null);
@@ -97,7 +100,7 @@ const PrivacyConsent: React.FC = () => {
             role="dialog"
             aria-modal="false"
             aria-live="polite"
-            aria-label="Aviso de privacidade"
+            aria-label={english ? "Privacy notice" : "Aviso de privacidade"}
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 80, opacity: 0 }}
@@ -105,37 +108,48 @@ const PrivacyConsent: React.FC = () => {
           >
             <div className={styles.content}>
               <div className={styles.text}>
-                <h3 className={styles.heading}>Sua privacidade importa</h3>
+                <h3 className={styles.heading}>{english ? "Your privacy matters" : "Sua privacidade importa"}</h3>
                 <p className={styles.message}>
-                  Este site não usa cookies nem ferramentas de análise de
-                  visitas. Ele guarda só um item temporário no navegador, para
-                  não repetir uma animação.{" "}
+                  {english
+                    ? "This site uses no cookies or visitor analytics. Your browser stores your response to this notice and a temporary marker to avoid replaying an animation."
+                    : "Este site não usa cookies nem ferramentas de análise de visitas. O navegador guarda sua resposta a este aviso e uma marca temporária para não repetir uma animação."}{" "}
                   <button
                     type="button"
                     className={styles.inlineLink}
                     onClick={() => setExpanded((v) => !v)}
                     aria-expanded={expanded}
                   >
-                    Saiba mais
+                    {english ? "Learn more" : "Saiba mais"}
                   </button>
                 </p>
 
                 {expanded ? (
                   <div className={styles.details}>
                     <p>
-                      <strong>O que é guardado:</strong> um item temporário
-                      (<code>gfc-mark-played</code>, em sessionStorage) que
-                      some ao fechar a aba. Não identifica você.
+                      <strong>{english ? "What is stored:" : "O que é guardado:"}</strong>{" "}
+                      {english ? "your response to this notice (" : "sua resposta a este aviso ("}
+                      <code>gfc-privacy-consent</code>
+                      {english ? ", in " : ", em "}
+                      <code>localStorage</code>
+                      {english ? ") and a temporary marker (" : ") e uma marca temporária ("}
+                      <code>gfc-mark-played</code>
+                      {english ? ", in " : ", em "}
+                      <code>sessionStorage</code>
+                      {english
+                        ? ") that is removed when you close the tab. These items do not identify you."
+                        : ") que some ao fechar a aba. Esses itens não identificam você."}
                     </p>
                     <p>
-                      <strong>O que não existe aqui:</strong> cookies,
-                      análise de visitas, anúncios e formulários. O único
-                      contato é por e-mail, se você escrever para mim.
+                      <strong>{english ? "What this site does not use:" : "O que não existe aqui:"}</strong>{" "}
+                      {english
+                        ? "cookies, visitor analytics, ads, or forms. The only contact is by email if you write to me."
+                        : "cookies, análise de visitas, anúncios e formulários. O único contato é por e-mail, se você escrever para mim."}
                     </p>
                     <p>
-                      <strong>Seus direitos:</strong> você pode acessar,
-                      corrigir, revogar o consentimento ou pedir a remoção dos
-                      seus dados a qualquer momento escrevendo para{" "}
+                      <strong>{english ? "Your rights:" : "Seus direitos:"}</strong>{" "}
+                      {english
+                        ? "you can access, correct, withdraw consent, or request removal of your data by writing to "
+                        : "você pode acessar, corrigir, revogar o consentimento ou pedir a remoção dos seus dados a qualquer momento escrevendo para "}
                       <a
                         className={styles.mailLink}
                         href="mailto:carvalhofernandesgfc@proton.me"
@@ -145,22 +159,24 @@ const PrivacyConsent: React.FC = () => {
                       .
                     </p>
                     <p className={styles.controller}>
-                      Controlador dos dados: Gabriel Fernandes de Carvalho ·
-                      Anápolis-GO · Política v. {POLICY_VERSION}
+                      {english
+                        ? "Data controller: Gabriel Fernandes de Carvalho · Anápolis, Brazil · Policy v. "
+                        : "Controlador dos dados: Gabriel Fernandes de Carvalho · Anápolis-GO · Política v. "}
+                      {POLICY_VERSION}
                     </p>
                   </div>
                 ) : null}
               </div>
               <div className={styles.actions}>
                 <Link className={styles.secondary} to="/privacidade">
-                  Política completa
+                  {english ? "Full privacy notice" : "Política completa"}
                 </Link>
                 <button
                   type="button"
                   className={styles.primary}
                   onClick={() => decide("accepted")}
                 >
-                  Entendi
+                  {english ? "Got it" : "Entendi"}
                 </button>
               </div>
             </div>

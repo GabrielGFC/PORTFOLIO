@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { featuredProjects } from "../../data/featuredProjects";
-import { RESUME_URL } from "../../motion/motion";
 import Monogram from "./Monogram";
 import styles from "./SiteFooter.module.scss";
 
@@ -26,72 +25,38 @@ const SiteFooter: React.FC = () => {
             <span>Gabriel Fernandes de Carvalho</span>
           </Link>
           <p>{t.tagline}</p>
-          <a className={styles.cta} href={`mailto:${EMAIL}`}>
-            {t.cta} <span aria-hidden="true">→</span>
-          </a>
         </div>
-
-        <nav className={styles.col} aria-labelledby="footer-nav">
-          <h2 id="footer-nav">{t.navTitle}</h2>
-          <ul>
-            <li>
-              <Link to="/" state={{ scrollTo: "top" }}>
-                {nav.home}
-              </Link>
-            </li>
-            <li>
-              <Link to="/" state={{ scrollTo: "work" }}>
-                {nav.work}
-              </Link>
-            </li>
-            <li>
-              <Link to="/trajetoria">{nav.journey}</Link>
-            </li>
-            <li>
-              <Link to="/" state={{ scrollTo: "about" }}>
-                {nav.about}
-              </Link>
-            </li>
-            <li>
-              <Link to="/" state={{ scrollTo: "contact" }}>
-                {nav.contact}
-              </Link>
-            </li>
-            <li>
-              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
-                {nav.resume} (PDF)
-              </a>
-            </li>
-          </ul>
-        </nav>
 
         <nav className={styles.col} aria-labelledby="footer-live">
           <h2 id="footer-live">{t.liveTitle}</h2>
           <ul>
             {liveProjects.map((project) => (
               <li key={project.url}>
-                <a href={project.url} target="_blank" rel="noopener noreferrer">
-                  {project.name} <span aria-hidden="true">↗</span>
+                <a className={styles.externalLink} href={project.url} target="_blank" rel="noopener noreferrer">
+                  <span className={styles.linkLabel}>{project.name}</span>
+                  <span className={styles.externalMark} aria-hidden="true">↗</span>
                 </a>
               </li>
             ))}
           </ul>
         </nav>
 
-        <div className={styles.col}>
+        <div className={`${styles.col} ${styles.contact}`}>
           <h2>{t.contactTitle}</h2>
           <ul>
             <li>
               <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/gabrielgfc1" target="_blank" rel="noopener noreferrer">
-                LinkedIn <span aria-hidden="true">↗</span>
+              <a className={styles.externalLink} href="https://www.linkedin.com/in/gabrielgfc1" target="_blank" rel="noopener noreferrer">
+                <span className={styles.linkLabel}>LinkedIn</span>
+                <span className={styles.externalMark} aria-hidden="true">↗</span>
               </a>
             </li>
             <li>
-              <a href="https://github.com/GabrielGFC" target="_blank" rel="noopener noreferrer">
-                GitHub <span aria-hidden="true">↗</span>
+              <a className={styles.externalLink} href="https://github.com/GabrielGFC" target="_blank" rel="noopener noreferrer">
+                <span className={styles.linkLabel}>GitHub</span>
+                <span className={styles.externalMark} aria-hidden="true">↗</span>
               </a>
             </li>
           </ul>
@@ -102,7 +67,7 @@ const SiteFooter: React.FC = () => {
         <div className={`container ${styles.bar}`}>
           <p>
             © {new Date().getFullYear()} Gabriel Fernandes de Carvalho. {t.rights}
-            <span className={styles.made}>{t.madeWith}</span>
+            {" "}<span className={styles.made}>{t.madeWith}</span>
           </p>
           <ul aria-label={t.legalTitle}>
             <li>

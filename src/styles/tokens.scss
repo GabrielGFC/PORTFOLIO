@@ -1,44 +1,33 @@
 /* ============================================
-   DESIGN TOKENS — SUNFALL, PAPEL CLARO
+   DESIGN TOKENS — SUNFALL, TEMA NOTURNO
    ============================================
-   Fundo branco frio (não creme/bege — evita o
-   clichê de paleta quente de IA), tinta quase-preta
-   para texto, ciano como acento assinatura.
-   void (tinta) e slate (tinta de acento) ficam
-   escuros em qualquer tema; night/deep-blue viraram
-   superfícies claras; ivory virou a tinta principal.
-   Contraste sobre --sunfall-paper-bg (#f6f7f5):
-   tinta 17.8:1, texto secundário ~7.9:1,
-   acento (slate) ~8.4:1.
-   Tipografia única (Archivo), sem kicker/eyebrow
-   acima de título: ver layout.scss.
+   Fundo azul profundo, superfícies elevadas e texto
+   claro. Ciano é reservado para ações e destaques.
    ============================================ */
 
 :root {
   /* ---------- PALETA SUNFALL ---------- */
-  /* void = tinta escura (texto/texto-sobre-acento), night/deep-blue = superfícies claras,
-     ivory = tinta principal (clara no tema escuro original, escura aqui), slate = tinta de
-     acento (texto/borda sobre o fundo claro), fire = acento vívido só em preenchimentos
-     autocontidos (botão, ícone, barra decorativa) — nunca como texto direto no fundo. */
-  --sunfall-void: #101b24;
-  --sunfall-paper-bg: #f6f7f5;
-  --sunfall-night: #ffffff;
-  --sunfall-deep-blue: #eef1ef;
-  --sunfall-slate: #284261;
-  --sunfall-slate-rgb: 40, 66, 97;
-  --sunfall-muted: #5b6b63;
-  --sunfall-ember: #1a6f8f;
-  --sunfall-burnt-orange: #1a6f8f;
-  --sunfall-fire: #54bad2;
-  --sunfall-cream: #c3d5c7;
-  --sunfall-ivory: #101b24;
+  /* void = fundo profundo; night/deep-blue = superfícies; ivory = texto principal;
+     slate = acento legível sobre fundo escuro. */
+  --sunfall-void: #071219;
+  --sunfall-paper-bg: #0b151b;
+  --sunfall-night: #101e27;
+  --sunfall-deep-blue: #172a34;
+  --sunfall-slate: #8ec7d3;
+  --sunfall-slate-rgb: 142, 199, 211;
+  --sunfall-muted: #afc0c8;
+  --sunfall-ember: #4eacbd;
+  --sunfall-burnt-orange: #4eacbd;
+  --sunfall-fire: #77c7d5;
+  --sunfall-cream: #d8e8e3;
+  --sunfall-ivory: #edf2f0;
 
-  --sunfall-ivory-rgb: 16, 27, 36;
-  --sunfall-fire-rgb: 84, 186, 210;
-  --sunfall-ember-rgb: 26, 111, 143;
+  --sunfall-ivory-rgb: 237, 242, 240;
+  --sunfall-fire-rgb: 119, 199, 213;
+  --sunfall-ember-rgb: 78, 172, 189;
   --sunfall-burnt-rgb: 26, 111, 143;
-  --sunfall-void-rgb: 16, 27, 36;
-  --sunfall-night-rgb: 255, 255, 255;
+  --sunfall-void-rgb: 7, 18, 25;
+  --sunfall-night-rgb: 16, 30, 39;
 
   /* Direção C: papel da galeria (tom levemente diferente do fundo geral, de propósito)
      e coral de enumeração (coral só em números de prancha) */
@@ -51,19 +40,20 @@
   --gfc-sand: #b8b095;
   --gfc-forest: #1e7453;
 
-  /* Texto secundário, cor sólida para manter o contraste AA (~7.9:1 sobre o papel) */
-  --sunfall-text-soft: #46566a;
+  /* Texto secundário para leitura confortável no fundo escuro. */
+  --sunfall-text-soft: #b3c2c8;
 
   /* ---------- SEMÂNTICAS ---------- */
   --color-bg: var(--sunfall-paper-bg);
   --color-surface: var(--sunfall-night);
   --color-surface-light: var(--sunfall-deep-blue);
   --color-overlay: rgba(var(--sunfall-void-rgb), 0.78);
+  --color-inverse-surface: var(--sunfall-void);
 
   --color-text-main: var(--sunfall-ivory);
   --color-text-main-rgb: var(--sunfall-ivory-rgb);
   --color-text-muted: var(--sunfall-text-soft);
-  --color-text-on-dark: var(--sunfall-night);
+  --color-text-on-dark: var(--sunfall-ivory);
   --color-text-on-surface: var(--sunfall-ivory);
   --color-text-on-primary: var(--sunfall-void);
 
@@ -76,7 +66,7 @@
   --color-primary: var(--sunfall-slate);
   --color-primary-rgb: var(--sunfall-slate-rgb);
   --color-primary-soft: var(--sunfall-cream);
-  --color-primary-soft-rgb: 255, 212, 163;
+  --color-primary-soft-rgb: 216, 232, 227;
 
   --color-border-subtle: rgba(var(--sunfall-ivory-rgb), 0.08);
   --color-border-medium: rgba(var(--sunfall-ivory-rgb), 0.16);
@@ -188,7 +178,37 @@
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
 
-  color-scheme: light;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --sunfall-void: #f7fafb;
+    --sunfall-paper-bg: #f3f7f8;
+    --sunfall-night: #ffffff;
+    --sunfall-deep-blue: #e8f0f2;
+    --sunfall-slate: #286876;
+    --sunfall-slate-rgb: 40, 104, 118;
+    --sunfall-muted: #52656c;
+    --sunfall-ember: #1e7280;
+    --sunfall-burnt-orange: #155e6d;
+    --sunfall-fire: #176b78;
+    --sunfall-cream: #0f5968;
+    --sunfall-ivory: #13242a;
+    --sunfall-ivory-rgb: 19, 36, 42;
+    --sunfall-fire-rgb: 23, 107, 120;
+    --sunfall-ember-rgb: 30, 114, 128;
+    --sunfall-burnt-rgb: 21, 94, 109;
+    --sunfall-void-rgb: 247, 250, 251;
+    --sunfall-night-rgb: 255, 255, 255;
+    --sunfall-text-soft: #50636a;
+    --color-overlay: rgba(7, 18, 25, 0.48);
+    --color-inverse-surface: #071219;
+    --color-text-on-dark: #edf2f0;
+    --color-primary-soft: #dcebee;
+    --color-primary-soft-rgb: 220, 235, 238;
+    color-scheme: light;
+  }
 }
 
 /* SCSS compat */

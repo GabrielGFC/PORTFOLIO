@@ -700,13 +700,12 @@
       "language": "Switch to Portuguese"
     },
     "hero": {
-      "eyebrow": "Software developer · Back-end and front-end",
+      "eyebrow": "Software developer · Back-end and web systems",
       "line1": "Gabriel Fernandes",
       "line2": "de Carvalho",
-      "statement": "I solve problems with software. I build the part people use (the screens of a website or system) and the part behind it (servers, databases and integrations). I have put systems live for a university and for companies.",
-      "playHint": "Tip: move your mouse or tap the screen. The background reacts.",
-      "primary": "Explore projects",
-      "secondary": "Get in touch",
+      "statement": "I build digital systems used by universities and companies. I work on the screens, services, and connections that make each system work.",
+      "primary": "View projects",
+      "secondary": "View résumé",
       "markLabel": "GFC monogram",
       "markCaption": "Software Engineer",
       "location": "Anápolis, Brazil · remote",
@@ -715,7 +714,7 @@
         { "value": "6", "label": "live sites and systems you can visit" },
         { "value": "3+", "label": "years building systems for UniEVANGÉLICA" },
         { "value": "482", "label": "automated tests in the system I rewrote in Java" },
-        { "value": "2", "label": "sides: what you see (front-end) and what runs behind it (back-end)" }
+        { "value": "2", "label": "sides: the screens and services that make a system work" }
       ],
       "scroll": "Scroll to continue",
       "credentialsLabel": "Credentials",
@@ -738,12 +737,12 @@
     },
     "work": {
       "eyebrow": "Projects",
-      "title": "Live projects. Click and see them working.",
-      "liveIntro": "Real systems used by real people. Each card opens the published site.",
+      "title": "Projects that show how I work.",
+      "liveIntro": "See what each system does, my contribution, and open the published projects.",
       "openSite": "Open the site",
       "details": "See details",
       "whatIs": "What it is",
-      "myPart": "What I did",
+      "myPart": "My contribution",
       "techTitle": "Technologies used",
       "techHint": "Tags with the tool names, for readers from the technical field.",
       "techLabels": {
@@ -755,12 +754,12 @@
       },
       "othersLabel": "Other projects, no public site yet",
       "live": [
-        { "key": "esports", "name": "UniEVANGÉLICA E-Sports Portal", "meta": "UniEVANGÉLICA · 5th edition · 2026", "plain": "Official site of the university's e-sports championship: students sign up by game category and past editions stay available for consultation.", "role": "With another developer, I built the screens and the server side, including security fixes." },
-        { "key": "lionFanstone", "name": "James Fanstone", "meta": "UniEVANGÉLICA · In production", "plain": "The university's academic research platform, used daily by its team. I rewrote the back of the system on more modern technologies, without stopping its use.", "role": "Author of all 83 code commits of the rewrite. Before that, I contributed to the old system as part of a team." },
-        { "key": "maximiza", "name": "Maximiza Seguros", "meta": "Client · 2026", "plain": "Website of an insurance broker: customers request quotes online through step-by-step forms and find partner real-estate agencies.", "role": "I built the whole site, with automated tests and a daily update of the partner list." },
-        { "key": "coneleste", "name": "Cone Leste Seguros", "meta": "Client · Collaboration", "plain": "Campaign page announcing the union of two insurance brokers and sending visitors to the main site.", "role": "I helped finish it, as part of a team: site icon, description and external link." },
-        { "key": "farmxp", "name": "Dev XP Auto-Farm", "meta": "Personal project", "plain": "My resume as a game: missions, technologies and contact, with a retro pixel-art look.", "role": "I conceived, designed and published it on my own." },
-        { "key": "jac", "name": "JAC — Academic and Community Journey", "meta": "Personal project · in development", "plain": "Platform for academic events: schedule, sign-up and QR-code attendance. Published version, still evolving.", "role": "I built parts of the server and the screens: QR-code attendance, points and security fixes." }
+        { "key": "esports", "name": "UniEVANGÉLICA E-Sports Portal", "meta": "UniEVANGÉLICA · 5th edition · 2026", "plain": "University championship site with sign-ups by game and an archive of past editions.", "role": "Built the screens and services with another developer and fixed security issues." },
+        { "key": "lionFanstone", "name": "James Fanstone", "meta": "UniEVANGÉLICA · In production", "plain": "Academic research system used by the university team. Rewrote its core service without interrupting use.", "role": "Authored all 83 code commits in the rewrite; contributed to the legacy system before that." },
+        { "key": "maximiza", "name": "Maximiza Seguros", "meta": "Client · 2026", "plain": "Brokerage website with step-by-step quote requests and a list of partner real-estate agencies.", "role": "Built the site and automated tests; the partner list updates daily." },
+        { "key": "coneleste", "name": "Cone Leste Seguros", "meta": "Client · Collaboration", "plain": "Campaign page announcing the union of two brokerages and linking to the main site.", "role": "Helped complete the website." },
+        { "key": "farmxp", "name": "Dev XP Auto-Farm", "meta": "Personal project", "plain": "Interactive résumé in game format, with missions, technologies, and contact details.", "role": "Created and published the project." },
+        { "key": "jac", "name": "JAC — Academic and Community Journey", "meta": "Personal project · in development", "plain": "Academic events platform with schedules, sign-up, and QR-code attendance.", "role": "Built parts of the server and screens and fixed security issues." }
       ],
       "others": [
         { "key": "aila", "name": "Aila", "meta": "Editorial platform · 2026", "plain": "Helps a scientific journal choose who reviews each paper, with local artificial intelligence and a reason for each suggestion." },
@@ -840,7 +839,7 @@
       "indexLabel": "Chapters",
       "chapterLabel": "Chapter",
       "milestoneLabel": "Milestone",
-      "timelineTitle": "From technical support to live systems, in five steps.",
+      "timelineTitle": "Experience in software development.",
       "timelineCta": "See the full journey",
       "timeline": [
         { "year": "2019", "title": "Technical support", "blurb": "I learned to solve real problems for people and networks." },
@@ -855,10 +854,7 @@
         { "id": "instituicoes", "period": "2024", "year": "2024", "title": "Institutional systems", "text": "I built internal management and automation solutions as a Software Developer at the Brazilian Air Force and, in October, started my internship at UniEVANGÉLICA.", "milestone": "Certifications in Laravel 11 and C# Fundamentals." },
         { "id": "producao", "period": "2025", "year": "2025", "title": "Production and responsibility", "text": "I started contributing to James Fanstone, an academic-research platform in production: the enrollment report, review reminders, and validations. In the second half, I started JAC.", "milestone": "118 commits to the backend of a production system." },
         { "id": "autoria", "period": "2026", "year": "2026", "title": "Architecture and authorship", "text": "I became Technology Assistant Level I, rewrote the James Fanstone backend in Java and Spring Boot, built Aila and the 5th edition of the E-Sports Portal, and shipped the Maximiza Seguros site.", "milestone": "Java rewrite in production, with 482 automated tests." }
-      ],
-      "ctaWork": "See selected work",
-      "ctaResume": "Download resume (PDF)",
-      "back": "Back to home"
+      ]
     },
     "contact": {
       "eyebrow": "Contact",
@@ -877,11 +873,9 @@
       "terms": "Terms",
       "cookies": "Cookies",
       "tagline": "Software developer in Anápolis, Brazil. Screens, servers and databases, end to end.",
-      "navTitle": "Navigate",
       "liveTitle": "Live projects",
       "contactTitle": "Contact",
       "legalTitle": "Documents",
-      "cta": "Shall we talk? Write to me",
       "madeWith": "Site built by me with React, TypeScript and Vite."
     }
   }

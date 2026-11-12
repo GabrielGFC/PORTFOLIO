@@ -1,10 +1,9 @@
 import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import SiteHeader from "../../components/lux/SiteHeader";
 import SiteFooter from "../../components/lux/SiteFooter";
-import { MaskedTitle, PageTransition, RESUME_URL, Reveal, duration, ease, scrollToSection } from "../../motion/motion";
+import { MaskedTitle, PageTransition, Reveal, duration, ease, scrollToSection } from "../../motion/motion";
 import styles from "./trajetoria.module.scss";
 
 const Trajetoria: React.FC = () => {
@@ -116,22 +115,6 @@ const Trajetoria: React.FC = () => {
           </ol>
         </div>
 
-        <section className={styles.outro}>
-          <div className={`container ${styles.outroInner}`}>
-            <Link to="/" state={{ scrollTo: "work" }} className={styles.primary}>
-              {t.ctaWork}
-              <span aria-hidden="true">→</span>
-            </Link>
-            <a className="linkArrow" href={RESUME_URL} target="_blank" rel="noopener noreferrer">
-              {t.ctaResume}
-              <span aria-hidden="true">↗</span>
-            </a>
-            <Link to="/" className="linkArrow">
-              {t.back}
-              <span aria-hidden="true">←</span>
-            </Link>
-          </div>
-        </section>
       </main>
 
       <SiteFooter />

@@ -3,6 +3,13 @@
   gap: 12px;
 }
 
+.compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+}
+
 .group {
   display: grid;
   gap: 6px;
@@ -30,6 +37,17 @@
     line-height: 1.5;
     color: var(--sunfall-slate);
   }
+}
+
+.compact li {
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(var(--sunfall-slate-rgb), 0.28);
+  background: rgba(var(--sunfall-fire-rgb), 0.12);
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--sunfall-slate);
 }
 
 /* Tecnologias do sistema antigo: mesmas etiquetas, em tom neutro, para não competir com as atuais */

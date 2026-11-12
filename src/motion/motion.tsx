@@ -13,7 +13,8 @@ export const RESUME_URL = "/Portifolio/Gabriel_Fernandes_de_Carvalho.pdf";
 export const scrollToSection = (id: string, reduce: boolean) => {
   const el = document.getElementById(id);
   if (!el) return;
-  const offset = id === "top" ? 0 : 72;
+  const header = document.querySelector("header");
+  const offset = id === "top" ? 0 : (header?.getBoundingClientRect().height ?? 72) + 16;
   const y = el.getBoundingClientRect().top + window.scrollY - offset;
   window.scrollTo({ top: y, behavior: reduce ? "auto" : "smooth" });
   if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "-1");

@@ -1,7 +1,6 @@
 import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import InteractiveBackground from '../components/lux/InteractiveBackground';
 import Portfolio from '../pages/portfolio';
 import Trajetoria from '../pages/trajetoria';
 import ProjectPage from '../pages/projeto';
@@ -15,7 +14,6 @@ const AppRoutes: React.FC = () => {
   const location = useLocation();
   return (
     <>
-      <InteractiveBackground />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Portfolio />} />

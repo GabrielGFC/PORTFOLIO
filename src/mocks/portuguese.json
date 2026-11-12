@@ -700,13 +700,12 @@
       "language": "Mudar para inglês"
     },
     "hero": {
-      "eyebrow": "Desenvolvedor de software · Back-end e front-end",
+      "eyebrow": "Desenvolvedor de software · Backend e sistemas web",
       "line1": "Gabriel Fernandes",
       "line2": "de Carvalho",
-      "statement": "Resolvo problemas com software. Construo a parte que as pessoas usam (as telas de um site ou sistema) e a parte que fica por trás (servidores, bancos de dados e integrações). Já coloquei no ar sistemas para uma universidade e para empresas.",
-      "playHint": "Dica: mexa o mouse ou toque na tela. O fundo reage.",
-      "primary": "Explorar projetos",
-      "secondary": "Entrar em contato",
+      "statement": "Construo sistemas digitais usados por universidades e empresas. Trabalho nas telas, nos serviços e nas conexões que fazem cada sistema funcionar.",
+      "primary": "Ver projetos",
+      "secondary": "Ver currículo",
       "markLabel": "Monograma GFC",
       "markCaption": "Software Engineer",
       "location": "Anápolis, GO · remoto",
@@ -715,7 +714,7 @@
         { "value": "6", "label": "sites e sistemas no ar, abertos para você visitar" },
         { "value": "3+", "label": "anos criando sistemas para a UniEVANGÉLICA" },
         { "value": "482", "label": "testes automáticos no sistema que reescrevi em Java" },
-        { "value": "2", "label": "frentes: o que se vê (front-end) e o que fica por trás (back-end)" }
+        { "value": "2", "label": "frentes: as telas e os serviços que fazem o sistema funcionar" }
       ],
       "scroll": "Role para continuar",
       "credentialsLabel": "Credenciais",
@@ -738,12 +737,12 @@
     },
     "work": {
       "eyebrow": "Projetos",
-      "title": "Projetos no ar. Clique e veja funcionando.",
-      "liveIntro": "Sistemas reais, usados por pessoas de verdade. Cada cartão leva ao site publicado.",
+      "title": "Projetos que mostram como trabalho.",
+      "liveIntro": "Veja o que cada sistema faz, qual foi minha contribuição e abra os projetos publicados.",
       "openSite": "Abrir o site",
       "details": "Ver detalhes",
       "whatIs": "O que é",
-      "myPart": "O que eu fiz",
+      "myPart": "Minha contribuição",
       "techTitle": "Tecnologias usadas",
       "techHint": "Etiquetas com os nomes das ferramentas, para quem for da área técnica.",
       "techLabels": {
@@ -755,12 +754,12 @@
       },
       "othersLabel": "Outros projetos, ainda sem site público",
       "live": [
-        { "key": "esports", "name": "Portal E-Sports UniEVANGÉLICA", "meta": "UniEVANGÉLICA · 5ª edição · 2026", "plain": "Site oficial do campeonato de e-sports da universidade: os alunos se inscrevem por modalidade e as edições anteriores ficam guardadas para consulta.", "role": "Desenvolvi, junto com outro desenvolvedor, as telas e a parte que roda no servidor, incluindo correções de segurança." },
-        { "key": "lionFanstone", "name": "James Fanstone", "meta": "UniEVANGÉLICA · Em produção", "plain": "Plataforma de pesquisa acadêmica da universidade, usada no dia a dia pela equipe. Reescrevi a parte de trás do sistema em tecnologias mais modernas, sem parar o uso.", "role": "Autor de todos os 83 registros de código (commits) da reescrita. Antes, já contribuía no sistema antigo, em equipe." },
-        { "key": "maximiza", "name": "Maximiza Seguros", "meta": "Cliente · 2026", "plain": "Site de uma corretora de seguros: o cliente pede cotação online em formulários passo a passo e encontra imobiliárias parceiras.", "role": "Desenvolvi o site inteiro, com testes automáticos e atualização diária da lista de parceiros." },
-        { "key": "coneleste", "name": "Cone Leste Seguros", "meta": "Cliente · Colaboração", "plain": "Página de campanha que anuncia a união de duas corretoras de seguros e leva o visitante ao site principal.", "role": "Colaborei na finalização, em equipe: ícone do site, descrição e link externo." },
-        { "key": "farmxp", "name": "Farm Automático de XP Dev", "meta": "Projeto pessoal", "plain": "Meu currículo em forma de jogo: missões, tecnologias e contato, com visual de jogo antigo (pixel art).", "role": "Idealizei, desenhei e publiquei sozinho." },
-        { "key": "jac", "name": "JAC — Jornada Acadêmica e Comunitária", "meta": "Projeto pessoal · em evolução", "plain": "Plataforma para eventos acadêmicos: programação, inscrição e registro de presença por QR Code. Versão publicada, ainda em evolução.", "role": "Desenvolvi partes do servidor e das telas: presença por QR Code, pontos e correções de segurança." }
+        { "key": "esports", "name": "Portal E-Sports UniEVANGÉLICA", "meta": "UniEVANGÉLICA · 5ª edição · 2026", "plain": "Site do campeonato universitário, com inscrições por modalidade e histórico de edições.", "role": "Criei as telas e serviços com outro desenvolvedor e corrigi falhas de segurança." },
+        { "key": "lionFanstone", "name": "James Fanstone", "meta": "UniEVANGÉLICA · Em produção", "plain": "Sistema de pesquisa acadêmica usado pela equipe da universidade. Reescrevi o serviço principal sem interromper o uso.", "role": "Fui responsável pelos 83 registros de código da reescrita; antes, contribuí no sistema legado." },
+        { "key": "maximiza", "name": "Maximiza Seguros", "meta": "Cliente · 2026", "plain": "Site de corretora com pedido de cotação em etapas e lista de imobiliárias parceiras.", "role": "Desenvolvi o site e testes automáticos; a lista de parceiros é atualizada diariamente." },
+        { "key": "coneleste", "name": "Cone Leste Seguros", "meta": "Cliente · Colaboração", "plain": "Página de campanha que anuncia a união de duas corretoras e direciona ao site principal.", "role": "Colaborei na finalização do site." },
+        { "key": "farmxp", "name": "Farm Automático de XP Dev", "meta": "Projeto pessoal", "plain": "Currículo interativo em formato de jogo, com missões, tecnologias e contato.", "role": "Criei e publiquei o projeto." },
+        { "key": "jac", "name": "JAC — Jornada Acadêmica e Comunitária", "meta": "Projeto pessoal · em evolução", "plain": "Plataforma de eventos acadêmicos com programação, inscrição e presença por QR Code.", "role": "Implementei partes do servidor e das telas e corrigi problemas de segurança." }
       ],
       "others": [
         { "key": "aila", "name": "Aila", "meta": "Plataforma editorial · 2026", "plain": "Ajuda uma revista científica a escolher quem avalia cada artigo, com inteligência artificial local e justificativa para cada indicação." },
@@ -840,7 +839,7 @@
       "indexLabel": "Capítulos",
       "chapterLabel": "Capítulo",
       "milestoneLabel": "Marco",
-      "timelineTitle": "Da assistência técnica aos sistemas no ar, em cinco passos.",
+      "timelineTitle": "Experiência em desenvolvimento de software.",
       "timelineCta": "Ver a trajetória completa",
       "timeline": [
         { "year": "2019", "title": "Suporte técnico", "blurb": "Aprendi a resolver problemas reais de pessoas e redes." },
@@ -855,10 +854,7 @@
         { "id": "instituicoes", "period": "2024", "year": "2024", "title": "Sistemas institucionais", "text": "Desenvolvi soluções internas de gestão e automação como Software Developer na Força Aérea Brasileira e, em outubro, comecei o estágio na UniEVANGÉLICA.", "milestone": "Certificações em Laravel 11 e Fundamentos do C#." },
         { "id": "producao", "period": "2025", "year": "2025", "title": "Produção e responsabilidade", "text": "Passei a contribuir com o James Fanstone, plataforma de pesquisa acadêmica em produção: relatório de matrículas, lembretes de avaliação e validações. No segundo semestre, comecei o JAC.", "milestone": "118 commits no backend de um sistema em produção." },
         { "id": "autoria", "period": "2026", "year": "2026", "title": "Arquitetura e autoria", "text": "Assumi o cargo de Assistente de Tecnologia Nível I, reescrevi o backend do James Fanstone em Java e Spring Boot, desenvolvi o Aila e a 5ª edição do Portal E-Sports, e publiquei o site da Maximiza Seguros.", "milestone": "Reescrita em Java em produção, com 482 testes automatizados." }
-      ],
-      "ctaWork": "Ver trabalho selecionado",
-      "ctaResume": "Baixar currículo (PDF)",
-      "back": "Voltar ao início"
+      ]
     },
     "contact": {
       "eyebrow": "Contato",
@@ -877,11 +873,9 @@
       "terms": "Termos",
       "cookies": "Cookies",
       "tagline": "Desenvolvedor de software em Anápolis, GO. Telas, servidores e bancos de dados, do começo ao fim.",
-      "navTitle": "Navegar",
       "liveTitle": "Projetos no ar",
       "contactTitle": "Contato",
       "legalTitle": "Documentos",
-      "cta": "Vamos conversar? Escreva para mim",
       "madeWith": "Site feito por mim com React, TypeScript e Vite."
     }
   }

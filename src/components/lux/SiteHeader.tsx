@@ -15,7 +15,6 @@ const SiteHeader: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const onHome = location.pathname === "/";
-  const onJourney = location.pathname === "/trajetoria";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -33,11 +32,11 @@ const SiteHeader: React.FC = () => {
       setSection(null);
       return;
     }
-    const ids = ["work", "experience", "about", "contact"];
+    const ids = ["experience", "work", "about", "contact"];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) setSection(entry.target.id === "experience" ? null : entry.target.id);
+          if (entry.isIntersecting) setSection(entry.target.id);
         });
       },
       { rootMargin: "-45% 0px -50% 0px" },
@@ -111,16 +110,8 @@ const SiteHeader: React.FC = () => {
 
           <nav aria-label={t.label} id="site-nav" className={`${styles.nav} ${open ? styles.navOpen : ""}`}>
             <ul>
+              {sectionLink("experience", t.journey)}
               {sectionLink("work", t.work)}
-              <li>
-                <Link
-                  to="/trajetoria"
-                  className={`${styles.link} ${onJourney ? styles.active : ""}`}
-                  aria-current={onJourney ? "page" : undefined}
-                >
-                  {t.journey}
-                </Link>
-              </li>
               {sectionLink("about", t.about)}
               {sectionLink("contact", t.contact)}
               <li>

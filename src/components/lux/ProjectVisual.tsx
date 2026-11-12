@@ -124,7 +124,7 @@ const ProjectVisual: React.FC<Props> = ({ thumbnailKey, alt, variant = "auto" })
     );
   }
   return (
-    <div className={`${styles.frame} ${styles.shot}`}>
+    <div className={`${styles.frame} ${styles.shot} ${variant === "shot" ? styles.compact : ""}`}>
       <span className={styles.chrome} aria-hidden="true">
         <i />
         <i />
