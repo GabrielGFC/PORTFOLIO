@@ -872,11 +872,10 @@
       "privacy": "Privacidade",
       "terms": "Termos",
       "cookies": "Cookies",
-      "tagline": "Desenvolvedor de software em Anápolis, GO. Telas, servidores e bancos de dados, do começo ao fim.",
-      "liveTitle": "Projetos no ar",
-      "contactTitle": "Contato",
-      "legalTitle": "Documentos",
-      "madeWith": "Site feito por mim com React, TypeScript e Vite."
+      "tagline": "Backend e APIs para sistemas que precisam funcionar.",
+      "contactTitle": "Vamos conversar?",
+      "socialTitle": "Perfis profissionais",
+      "legalTitle": "Documentos"
     }
   }
 }

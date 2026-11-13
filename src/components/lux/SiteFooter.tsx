@@ -1,20 +1,21 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import { featuredProjects } from "../../data/featuredProjects";
 import Monogram from "./Monogram";
 import styles from "./SiteFooter.module.scss";
 
 const EMAIL = "carvalhofernandesgfc@proton.me";
 
+const ExternalArrow: React.FC = () => (
+  <svg className={styles.arrow} viewBox="0 0 16 16" fill="none" aria-hidden="true">
+    <path d="M4 12 12 4M5 4h7v7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 const SiteFooter: React.FC = () => {
   const { data } = useContext(LanguageContext);
   const t = data.lux.footer;
   const nav = data.lux.nav;
-  const liveProjects = data.lux.work.live.flatMap((item) => {
-    const url = featuredProjects.find((project) => project.i18nKey === item.key)?.caseStudy.referenceLink;
-    return url ? [{ name: item.name, url }] : [];
-  });
 
   return (
     <footer className={styles.footer}>
@@ -27,59 +28,38 @@ const SiteFooter: React.FC = () => {
           <p>{t.tagline}</p>
         </div>
 
-        <nav className={styles.col} aria-labelledby="footer-live">
-          <h2 id="footer-live">{t.liveTitle}</h2>
-          <ul>
-            {liveProjects.map((project) => (
-              <li key={project.url}>
-                <a className={styles.externalLink} href={project.url} target="_blank" rel="noopener noreferrer">
-                  <span className={styles.linkLabel}>{project.name}</span>
-                  <span className={styles.externalMark} aria-hidden="true">↗</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <section className={styles.contact} aria-labelledby="footer-contact-title">
+          <div>
+            <h2 id="footer-contact-title">{t.contactTitle}</h2>
+            <a className={styles.emailAction} href={`mailto:${EMAIL}`}>
+              <span>{EMAIL}</span>
+              <ExternalArrow />
+            </a>
+          </div>
 
-        <div className={`${styles.col} ${styles.contact}`}>
-          <h2>{t.contactTitle}</h2>
-          <ul>
-            <li>
-              <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-            </li>
-            <li>
-              <a className={styles.externalLink} href="https://www.linkedin.com/in/gabrielgfc1" target="_blank" rel="noopener noreferrer">
-                <span className={styles.linkLabel}>LinkedIn</span>
-                <span className={styles.externalMark} aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a className={styles.externalLink} href="https://github.com/GabrielGFC" target="_blank" rel="noopener noreferrer">
-                <span className={styles.linkLabel}>GitHub</span>
-                <span className={styles.externalMark} aria-hidden="true">↗</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+          <nav className={styles.socials} aria-label={t.socialTitle}>
+            <a href="https://www.linkedin.com/in/gabrielgfc1" target="_blank" rel="noopener noreferrer">
+              <span>LinkedIn</span>
+              <ExternalArrow />
+            </a>
+            <a href="https://github.com/GabrielGFC" target="_blank" rel="noopener noreferrer">
+              <span>GitHub</span>
+              <ExternalArrow />
+            </a>
+          </nav>
+        </section>
       </div>
 
       <div className={styles.bottom}>
         <div className={`container ${styles.bar}`}>
-          <p>
-            © {new Date().getFullYear()} Gabriel Fernandes de Carvalho. {t.rights}
-            {" "}<span className={styles.made}>{t.madeWith}</span>
-          </p>
-          <ul aria-label={t.legalTitle}>
-            <li>
-              <Link to="/privacidade">{t.privacy}</Link>
-            </li>
-            <li>
-              <Link to="/termos">{t.terms}</Link>
-            </li>
-            <li>
-              <Link to="/cookies">{t.cookies}</Link>
-            </li>
-          </ul>
+          <p>© {new Date().getFullYear()} Gabriel Fernandes de Carvalho. {t.rights}</p>
+          <nav aria-label={t.legalTitle}>
+            <ul>
+              <li><Link to="/privacidade">{t.privacy}</Link></li>
+              <li><Link to="/termos">{t.terms}</Link></li>
+              <li><Link to="/cookies">{t.cookies}</Link></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </footer>

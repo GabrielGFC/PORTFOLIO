@@ -872,11 +872,10 @@
       "privacy": "Privacy",
       "terms": "Terms",
       "cookies": "Cookies",
-      "tagline": "Software developer in Anápolis, Brazil. Screens, servers and databases, end to end.",
-      "liveTitle": "Live projects",
-      "contactTitle": "Contact",
-      "legalTitle": "Documents",
-      "madeWith": "Site built by me with React, TypeScript and Vite."
+      "tagline": "Backend and APIs for systems that need to work.",
+      "contactTitle": "Let’s talk",
+      "socialTitle": "Professional profiles",
+      "legalTitle": "Documents"
     }
   }
 }
