@@ -10,7 +10,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 const root = fileURLToPath(new URL("..", import.meta.url));
 const dist = path.join(root, "dist");
 const ssrDir = path.join(root, "dist-ssr");
-const BASENAME = "/Portifolio";
+const BASENAME = process.env.GITHUB_ACTIONS ? "/PORTFOLIO" : "/Portifolio";
 
 const entry = ["entry-server.mjs", "entry-server.js"].map((f) => path.join(ssrDir, f)).find(existsSync);
 if (!entry) throw new Error("dist-ssr/entry-server não encontrado: rode `vite build --ssr src/entry-server.tsx --outDir dist-ssr` antes.");

@@ -2,7 +2,7 @@ import Portuguese from "../mocks/portuguese.json";
 import { featuredProjects } from "../data/featuredProjects";
 
 /** Origem e prefixo do site publicado (GitHub Pages). */
-export const SITE_URL = "https://gabrielgfc.github.io/Portifolio";
+export const SITE_URL = `https://gabrielgfc.github.io${import.meta.env.BASE_URL.replace(/\/$/, "")}`;
 export const SITE_NAME = "Gabriel Fernandes de Carvalho";
 export const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 

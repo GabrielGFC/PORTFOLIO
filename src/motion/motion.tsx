@@ -7,7 +7,7 @@ export const duration = { fast: 0.22, base: 0.6, slow: 1.1, cinematic: 1.4 };
 export const stagger = { tight: 0.06, base: 0.12 };
 export const distance = { sm: 16, md: 28, lg: 60 };
 
-export const RESUME_URL = "/Portifolio/Gabriel_Fernandes_de_Carvalho.pdf";
+export const RESUME_URL = `${import.meta.env.BASE_URL}Gabriel_Fernandes_de_Carvalho.pdf`;
 
 /** Rola até uma seção e entrega o foco a ela, para quem navega por teclado. */
 export const scrollToSection = (id: string, reduce: boolean) => {

@@ -21,7 +21,7 @@ export default defineConfig(({ isSsrBuild }) => ({
           }),
         ]),
   ],
-  base: '/Portifolio/',
+  base: process.env.GITHUB_ACTIONS ? '/PORTFOLIO/' : '/Portifolio/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
