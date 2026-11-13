@@ -11,15 +11,17 @@ import Closing from "../../components/lux/Closing";
 import PrivacyConsent from "../../components/PrivacyConsent";
 import SiteFooter from "../../components/lux/SiteFooter";
 import { PageTransition, scrollToSection } from "../../motion/motion";
+import { SITE_URL } from "../../seo/pages";
 
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Gabriel Fernandes de Carvalho",
   jobTitle: "Desenvolvedor de software",
-  url: "https://gabrielgfc.github.io/Portifolio/",
+  url: `${SITE_URL}/`,
   sameAs: ["https://www.linkedin.com/in/gabrielgfc1", "https://github.com/GabrielGFC"],
 };
+const personSchemaJson = JSON.stringify(personSchema).replace(/</g, "\\u003c");
 
 const Portfolio: React.FC = () => {
   const location = useLocation();
@@ -42,7 +44,7 @@ const Portfolio: React.FC = () => {
   return (
     <PageTransition>
       <SiteHeader />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: personSchemaJson }} />
       <main id="conteudo" tabIndex={-1}>
         <Intro />
         <Numbers />
