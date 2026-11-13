@@ -68,7 +68,7 @@ const SiteHeader: React.FC = () => {
   const goTo = (id: string) => {
     setOpen(false);
     if (onHome) scrollToSection(id, reduce);
-    else navigate("/", { state: { scrollTo: id } });
+    else void navigate("/", { state: { scrollTo: id } });
   };
 
   const sectionLink = (id: string, label: string) => (
