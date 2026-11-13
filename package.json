@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "bun@1.1.34",
   "type": "module",
-  "homepage": "https://gabrielgfc.github.io/Portifolio/",
+  "homepage": "https://gabrielgfc.github.io/PORTFOLIO/",
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
